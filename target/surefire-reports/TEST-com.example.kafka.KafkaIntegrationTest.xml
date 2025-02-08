@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.example.kafka.KafkaIntegrationTest" time="59.218" tests="1" errors="0" skipped="0" failures="1">
+  <properties>
+    <property name="java.specification.version" value="17"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="C:\Users\user\Documents\taoufik_project\reactive\reactive\target\test-classes;C:\Users\user\Documents\taoufik_project\reactive\reactive\target\classes;C:\Users\user\.m2\repository\org\springframework\boot\spring-boot-starter-webflux\3.2.3\spring-boot-starter-webflux-3.2.3.jar;C:\Users\user\.m2\repository\org\springframework\boot\spring-boot-starter\3.2.3\spring-boot-starter-3.2.3.jar;C:\Users\user\.m2\repository\org\springframework\boot\spring-boot\3.2.3\spring-boot-3.2.3.jar;C:\Users\user\.m2\repository\org\springframework\boot\spring-boot-autoconfigure\3.2.3\spring-boot-autoconfigure-3.2.3.jar;C:\Users\user\.m2\repository\org\springframework\boot\spring-boot-starter-logging\3.2.3\spring-boot-starter-logging-3.2.3.jar;C:\Users\user\.m2\repository\org\apache\logging\log4j\log4j-to-slf4j\2.21.1\log4j-to-slf4j-2.21.1.jar;C:\Users\user\.m2\repository\org\apache\logging\log4j\log4j-api\2.21.1\log4j-api-2.21.1.jar;C:\Users\user\.m2\repository\org\slf4j\jul-to-slf4j\2.0.12\jul-to-slf4j-2.0.12.jar;C:\Users\user\.m2\repository\jakarta\annotation\jakarta.annotation-api\2.1.1\jakarta.annotation-api-2.1.1.jar;C:\Users\user\.m2\repository\org\yaml\snakeyaml\2.2\snakeyaml-2.2.jar;C:\Users\user\.m2\repository\org\springframework\boot\spring-boot-starter-json\3.2.3\spring-boot-starter-json-3.2.3.jar;C:\Users\user\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jdk8\2.15.4\jackson-datatype-jdk8-2.15.4.jar;C:\Users\user\.m2\repository\com\fasterxml\jackson\module\jackson-module-parameter-names\2.15.4\jackson-module-parameter-names-2.15.4.jar;C:\Users\user\.m2\repository\org\springframework\boot\spring-boot-starter-reactor-netty\3.2.3\spring-boot-starter-reactor-netty-3.2.3.jar;C:\Users\user\.m2\repository\io\projectreactor\netty\reactor-netty-http\1.1.16\reactor-netty-http-1.1.16.jar;C:\Users\user\.m2\repository\io\netty\netty-codec-http\4.1.107.Final\netty-codec-http-4.1.107.Final.jar;C:\Users\user\.m2\repository\io\netty\netty-codec-http2\4.1.107.Final\netty-codec-http2-4.1.107.Final.jar;C:\Users\user\.m2\repository\io\netty\netty-resolver-dns\4.1.107.Final\netty-resolver-dns-4.1.107.Final.jar;C:\Users\user\.m2\repository\io\netty\netty-codec-dns\4.1.107.Final\netty-codec-dns-4.1.107.Final.jar;C:\Users\user\.m2\repository\io\netty\netty-resolver-dns-native-macos\4.1.107.Final\netty-resolver-dns-native-macos-4.1.107.Final-osx-x86_64.jar;C:\Users\user\.m2\repository\io\netty\netty-resolver-dns-classes-macos\4.1.107.Final\netty-resolver-dns-classes-macos-4.1.107.Final.jar;C:\Users\user\.m2\repository\io\netty\netty-transport-native-epoll\4.1.107.Final\netty-transport-native-epoll-4.1.107.Final-linux-x86_64.jar;C:\Users\user\.m2\repository\io\projectreactor\netty\reactor-netty-core\1.1.16\reactor-netty-core-1.1.16.jar;C:\Users\user\.m2\repository\io\netty\netty-handler-proxy\4.1.107.Final\netty-handler-proxy-4.1.107.Final.jar;C:\Users\user\.m2\repository\io\netty\netty-codec-socks\4.1.107.Final\netty-codec-socks-4.1.107.Final.jar;C:\Users\user\.m2\repository\org\springframework\spring-web\6.1.4\spring-web-6.1.4.jar;C:\Users\user\.m2\repository\org\springframework\spring-beans\6.1.4\spring-beans-6.1.4.jar;C:\Users\user\.m2\repository\org\springframework\spring-webflux\6.1.4\spring-webflux-6.1.4.jar;C:\Users\user\.m2\repository\org\springframework\boot\spring-boot-starter-data-mongodb-reactive\3.2.3\spring-boot-starter-data-mongodb-reactive-3.2.3.jar;C:\Users\user\.m2\repository\io\projectreactor\reactor-core\3.6.3\reactor-core-3.6.3.jar;C:\Users\user\.m2\repository\org\reactivestreams\reactive-streams\1.0.4\reactive-streams-1.0.4.jar;C:\Users\user\.m2\repository\org\mongodb\mongodb-driver-reactivestreams\4.11.1\mongodb-driver-reactivestreams-4.11.1.jar;C:\Users\user\.m2\repository\org\mongodb\bson\4.11.1\bson-4.11.1.jar;C:\Users\user\.m2\repository\org\mongodb\mongodb-driver-core\4.11.1\mongodb-driver-core-4.11.1.jar;C:\Users\user\.m2\repository\org\mongodb\bson-record-codec\4.11.1\bson-record-codec-4.11.1.jar;C:\Users\user\.m2\repository\org\springframework\data\spring-data-mongodb\4.2.3\spring-data-mongodb-4.2.3.jar;C:\Users\user\.m2\repository\org\springframework\spring-expression\6.1.4\spring-expression-6.1.4.jar;C:\Users\user\.m2\repository\org\springframework\data\spring-data-commons\3.2.3\spring-data-commons-3.2.3.jar;C:\Users\user\.m2\repository\org\slf4j\slf4j-api\2.0.12\slf4j-api-2.0.12.jar;C:\Users\user\.m2\repository\org\springframework\boot\spring-boot-starter-validation\3.2.3\spring-boot-starter-validation-3.2.3.jar;C:\Users\user\.m2\repository\org\apache\tomcat\embed\tomcat-embed-el\10.1.19\tomcat-embed-el-10.1.19.jar;C:\Users\user\.m2\repository\org\hibernate\validator\hibernate-validator\8.0.1.Final\hibernate-validator-8.0.1.Final.jar;C:\Users\user\.m2\repository\jakarta\validation\jakarta.validation-api\3.0.2\jakarta.validation-api-3.0.2.jar;C:\Users\user\.m2\repository\org\jboss\logging\jboss-logging\3.5.3.Final\jboss-logging-3.5.3.Final.jar;C:\Users\user\.m2\repository\com\fasterxml\classmate\1.6.0\classmate-1.6.0.jar;C:\Users\user\.m2\repository\org\springframework\kafka\spring-kafka\3.1.2\spring-kafka-3.1.2.jar;C:\Users\user\.m2\repository\org\springframework\spring-context\6.1.4\spring-context-6.1.4.jar;C:\Users\user\.m2\repository\org\springframework\spring-aop\6.1.4\spring-aop-6.1.4.jar;C:\Users\user\.m2\repository\org\springframework\spring-messaging\6.1.4\spring-messaging-6.1.4.jar;C:\Users\user\.m2\repository\org\springframework\spring-tx\6.1.4\spring-tx-6.1.4.jar;C:\Users\user\.m2\repository\org\springframework\retry\spring-retry\2.0.5\spring-retry-2.0.5.jar;C:\Users\user\.m2\repository\org\apache\kafka\kafka-clients\3.6.1\kafka-clients-3.6.1.jar;C:\Users\user\.m2\repository\com\github\luben\zstd-jni\1.5.5-1\zstd-jni-1.5.5-1.jar;C:\Users\user\.m2\repository\org\lz4\lz4-java\1.8.0\lz4-java-1.8.0.jar;C:\Users\user\.m2\repository\org\xerial\snappy\snappy-java\1.1.10.5\snappy-java-1.1.10.5.jar;C:\Users\user\.m2\repository\io\micrometer\micrometer-observation\1.12.3\micrometer-observation-1.12.3.jar;C:\Users\user\.m2\repository\io\micrometer\micrometer-commons\1.12.3\micrometer-commons-1.12.3.jar;C:\Users\user\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;C:\Users\user\.m2\repository\io\projectreactor\kafka\reactor-kafka\1.3.23\reactor-kafka-1.3.23.jar;C:\Users\user\.m2\repository\org\eclipse\paho\org.eclipse.paho.client.mqttv3\1.2.5\org.eclipse.paho.client.mqttv3-1.2.5.jar;C:\Users\user\.m2\repository\org\springframework\integration\spring-integration-mqtt\6.2.2\spring-integration-mqtt-6.2.2.jar;C:\Users\user\.m2\repository\org\springframework\integration\spring-integration-core\6.2.2\spring-integration-core-6.2.2.jar;C:\Users\user\.m2\repository\org\springdoc\springdoc-openapi-starter-webflux-ui\2.3.0\springdoc-openapi-starter-webflux-ui-2.3.0.jar;C:\Users\user\.m2\repository\org\springdoc\springdoc-openapi-starter-webflux-api\2.3.0\springdoc-openapi-starter-webflux-api-2.3.0.jar;C:\Users\user\.m2\repository\org\springdoc\springdoc-openapi-starter-common\2.3.0\springdoc-openapi-starter-common-2.3.0.jar;C:\Users\user\.m2\repository\io\swagger\core\v3\swagger-core-jakarta\2.2.19\swagger-core-jakarta-2.2.19.jar;C:\Users\user\.m2\repository\org\apache\commons\commons-lang3\3.13.0\commons-lang3-3.13.0.jar;C:\Users\user\.m2\repository\io\swagger\core\v3\swagger-annotations-jakarta\2.2.19\swagger-annotations-jakarta-2.2.19.jar;C:\Users\user\.m2\repository\io\swagger\core\v3\swagger-models-jakarta\2.2.19\swagger-models-jakarta-2.2.19.jar;C:\Users\user\.m2\repository\com\fasterxml\jackson\dataformat\jackson-dataformat-yaml\2.15.4\jackson-dataformat-yaml-2.15.4.jar;C:\Users\user\.m2\repository\org\webjars\swagger-ui\5.10.3\swagger-ui-5.10.3.jar;C:\Users\user\.m2\repository\org\projectlombok\lombok\1.18.30\lombok-1.18.30.jar;C:\Users\user\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.15.4\jackson-datatype-jsr310-2.15.4.jar;C:\Users\user\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.15.4\jackson-annotations-2.15.4.jar;C:\Users\user\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.15.4\jackson-core-2.15.4.jar;C:\Users\user\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.15.4\jackson-databind-2.15.4.jar;C:\Users\user\.m2\repository\org\springframework\boot\spring-boot-starter-test\3.2.3\spring-boot-starter-test-3.2.3.jar;C:\Users\user\.m2\repository\org\springframework\boot\spring-boot-test\3.2.3\spring-boot-test-3.2.3.jar;C:\Users\user\.m2\repository\org\springframework\boot\spring-boot-test-autoconfigure\3.2.3\spring-boot-test-autoconfigure-3.2.3.jar;C:\Users\user\.m2\repository\com\jayway\jsonpath\json-path\2.9.0\json-path-2.9.0.jar;C:\Users\user\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\4.0.1\jakarta.xml.bind-api-4.0.1.jar;C:\Users\user\.m2\repository\jakarta\activation\jakarta.activation-api\2.1.2\jakarta.activation-api-2.1.2.jar;C:\Users\user\.m2\repository\net\minidev\json-smart\2.5.0\json-smart-2.5.0.jar;C:\Users\user\.m2\repository\net\minidev\accessors-smart\2.5.0\accessors-smart-2.5.0.jar;C:\Users\user\.m2\repository\org\ow2\asm\asm\9.3\asm-9.3.jar;C:\Users\user\.m2\repository\org\assertj\assertj-core\3.24.2\assertj-core-3.24.2.jar;C:\Users\user\.m2\repository\net\bytebuddy\byte-buddy\1.14.12\byte-buddy-1.14.12.jar;C:\Users\user\.m2\repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;C:\Users\user\.m2\repository\org\junit\jupiter\junit-jupiter\5.10.2\junit-jupiter-5.10.2.jar;C:\Users\user\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.2\junit-jupiter-params-5.10.2.jar;C:\Users\user\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.2\junit-jupiter-engine-5.10.2.jar;C:\Users\user\.m2\repository\org\mockito\mockito-core\5.7.0\mockito-core-5.7.0.jar;C:\Users\user\.m2\repository\net\bytebuddy\byte-buddy-agent\1.14.12\byte-buddy-agent-1.14.12.jar;C:\Users\user\.m2\repository\org\objenesis\objenesis\3.3\objenesis-3.3.jar;C:\Users\user\.m2\repository\org\mockito\mockito-junit-jupiter\5.7.0\mockito-junit-jupiter-5.7.0.jar;C:\Users\user\.m2\repository\org\skyscreamer\jsonassert\1.5.1\jsonassert-1.5.1.jar;C:\Users\user\.m2\repository\com\vaadin\external\google\android-json\0.0.20131108.vaadin1\android-json-0.0.20131108.vaadin1.jar;C:\Users\user\.m2\repository\org\springframework\spring-core\6.1.4\spring-core-6.1.4.jar;C:\Users\user\.m2\repository\org\springframework\spring-jcl\6.1.4\spring-jcl-6.1.4.jar;C:\Users\user\.m2\repository\org\springframework\spring-test\6.1.4\spring-test-6.1.4.jar;C:\Users\user\.m2\repository\org\xmlunit\xmlunit-core\2.9.1\xmlunit-core-2.9.1.jar;C:\Users\user\.m2\repository\io\projectreactor\reactor-test\3.6.3\reactor-test-3.6.3.jar;C:\Users\user\.m2\repository\org\springframework\kafka\spring-kafka-test\3.1.2\spring-kafka-test-3.1.2.jar;C:\Users\user\.m2\repository\org\apache\zookeeper\zookeeper\3.8.3\zookeeper-3.8.3.jar;C:\Users\user\.m2\repository\org\apache\zookeeper\zookeeper-jute\3.8.3\zookeeper-jute-3.8.3.jar;C:\Users\user\.m2\repository\org\apache\yetus\audience-annotations\0.12.0\audience-annotations-0.12.0.jar;C:\Users\user\.m2\repository\io\netty\netty-handler\4.1.107.Final\netty-handler-4.1.107.Final.jar;C:\Users\user\.m2\repository\io\netty\netty-common\4.1.107.Final\netty-common-4.1.107.Final.jar;C:\Users\user\.m2\repository\io\netty\netty-resolver\4.1.107.Final\netty-resolver-4.1.107.Final.jar;C:\Users\user\.m2\repository\io\netty\netty-buffer\4.1.107.Final\netty-buffer-4.1.107.Final.jar;C:\Users\user\.m2\repository\io\netty\netty-transport\4.1.107.Final\netty-transport-4.1.107.Final.jar;C:\Users\user\.m2\repository\io\netty\netty-transport-native-unix-common\4.1.107.Final\netty-transport-native-unix-common-4.1.107.Final.jar;C:\Users\user\.m2\repository\io\netty\netty-codec\4.1.107.Final\netty-codec-4.1.107.Final.jar;C:\Users\user\.m2\repository\io\netty\netty-transport-native-epoll\4.1.107.Final\netty-transport-native-epoll-4.1.107.Final.jar;C:\Users\user\.m2\repository\io\netty\netty-transport-classes-epoll\4.1.107.Final\netty-transport-classes-epoll-4.1.107.Final.jar;C:\Users\user\.m2\repository\ch\qos\logback\logback-core\1.4.14\logback-core-1.4.14.jar;C:\Users\user\.m2\repository\ch\qos\logback\logback-classic\1.4.14\logback-classic-1.4.14.jar;C:\Users\user\.m2\repository\commons-io\commons-io\2.11.0\commons-io-2.11.0.jar;C:\Users\user\.m2\repository\org\apache\kafka\kafka-clients\3.6.1\kafka-clients-3.6.1-test.jar;C:\Users\user\.m2\repository\org\apache\kafka\kafka-metadata\3.6.1\kafka-metadata-3.6.1.jar;C:\Users\user\.m2\repository\org\apache\kafka\kafka-raft\3.6.1\kafka-raft-3.6.1.jar;C:\Users\user\.m2\repository\com\yammer\metrics\metrics-core\2.2.0\metrics-core-2.2.0.jar;C:\Users\user\.m2\repository\org\apache\kafka\kafka-server-common\3.6.1\kafka-server-common-3.6.1.jar;C:\Users\user\.m2\repository\net\sf\jopt-simple\jopt-simple\5.0.4\jopt-simple-5.0.4.jar;C:\Users\user\.m2\repository\org\pcollections\pcollections\4.0.1\pcollections-4.0.1.jar;C:\Users\user\.m2\repository\org\apache\kafka\kafka-server-common\3.6.1\kafka-server-common-3.6.1-test.jar;C:\Users\user\.m2\repository\org\apache\kafka\kafka-streams-test-utils\3.6.1\kafka-streams-test-utils-3.6.1.jar;C:\Users\user\.m2\repository\org\apache\kafka\kafka-streams\3.6.1\kafka-streams-3.6.1.jar;C:\Users\user\.m2\repository\org\rocksdb\rocksdbjni\7.9.2\rocksdbjni-7.9.2.jar;C:\Users\user\.m2\repository\org\apache\kafka\kafka_2.13\3.6.1\kafka_2.13-3.6.1.jar;C:\Users\user\.m2\repository\org\scala-lang\scala-library\2.13.11\scala-library-2.13.11.jar;C:\Users\user\.m2\repository\org\apache\kafka\kafka-group-coordinator\3.6.1\kafka-group-coordinator-3.6.1.jar;C:\Users\user\.m2\repository\org\apache\kafka\kafka-storage-api\3.6.1\kafka-storage-api-3.6.1.jar;C:\Users\user\.m2\repository\org\apache\kafka\kafka-tools-api\3.6.1\kafka-tools-api-3.6.1.jar;C:\Users\user\.m2\repository\org\apache\kafka\kafka-storage\3.6.1\kafka-storage-3.6.1.jar;C:\Users\user\.m2\repository\com\github\ben-manes\caffeine\caffeine\3.1.8\caffeine-3.1.8.jar;C:\Users\user\.m2\repository\org\checkerframework\checker-qual\3.37.0\checker-qual-3.37.0.jar;C:\Users\user\.m2\repository\com\google\errorprone\error_prone_annotations\2.21.1\error_prone_annotations-2.21.1.jar;C:\Users\user\.m2\repository\net\sourceforge\argparse4j\argparse4j\0.7.0\argparse4j-0.7.0.jar;C:\Users\user\.m2\repository\commons-validator\commons-validator\1.7\commons-validator-1.7.jar;C:\Users\user\.m2\repository\commons-beanutils\commons-beanutils\1.9.4\commons-beanutils-1.9.4.jar;C:\Users\user\.m2\repository\commons-digester\commons-digester\2.1\commons-digester-2.1.jar;C:\Users\user\.m2\repository\commons-collections\commons-collections\3.2.2\commons-collections-3.2.2.jar;C:\Users\user\.m2\repository\com\fasterxml\jackson\module\jackson-module-scala_2.13\2.15.4\jackson-module-scala_2.13-2.15.4.jar;C:\Users\user\.m2\repository\com\thoughtworks\paranamer\paranamer\2.8\paranamer-2.8.jar;C:\Users\user\.m2\repository\com\fasterxml\jackson\dataformat\jackson-dataformat-csv\2.15.4\jackson-dataformat-csv-2.15.4.jar;C:\Users\user\.m2\repository\org\bitbucket\b_c\jose4j\0.9.3\jose4j-0.9.3.jar;C:\Users\user\.m2\repository\org\scala-lang\modules\scala-collection-compat_2.13\2.10.0\scala-collection-compat_2.13-2.10.0.jar;C:\Users\user\.m2\repository\org\scala-lang\modules\scala-java8-compat_2.13\1.0.2\scala-java8-compat_2.13-1.0.2.jar;C:\Users\user\.m2\repository\org\scala-lang\scala-reflect\2.13.11\scala-reflect-2.13.11.jar;C:\Users\user\.m2\repository\com\typesafe\scala-logging\scala-logging_2.13\3.9.4\scala-logging_2.13-3.9.4.jar;C:\Users\user\.m2\repository\io\dropwizard\metrics\metrics-core\4.2.25\metrics-core-4.2.25.jar;C:\Users\user\.m2\repository\commons-cli\commons-cli\1.4\commons-cli-1.4.jar;C:\Users\user\.m2\repository\org\apache\kafka\kafka_2.13\3.6.1\kafka_2.13-3.6.1-test.jar;C:\Users\user\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.2\junit-jupiter-api-5.10.2.jar;C:\Users\user\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\user\.m2\repository\org\junit\platform\junit-platform-commons\1.10.2\junit-platform-commons-1.10.2.jar;C:\Users\user\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\user\.m2\repository\org\junit\platform\junit-platform-launcher\1.10.2\junit-platform-launcher-1.10.2.jar;C:\Users\user\.m2\repository\org\junit\platform\junit-platform-engine\1.10.2\junit-platform-engine-1.10.2.jar;C:\Users\user\.m2\repository\org\testcontainers\mongodb\1.19.5\mongodb-1.19.5.jar;C:\Users\user\.m2\repository\org\testcontainers\testcontainers\1.19.5\testcontainers-1.19.5.jar;C:\Users\user\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\user\.m2\repository\org\hamcrest\hamcrest-core\2.2\hamcrest-core-2.2.jar;C:\Users\user\.m2\repository\org\apache\commons\commons-compress\1.24.0\commons-compress-1.24.0.jar;C:\Users\user\.m2\repository\org\rnorth\duct-tape\duct-tape\1.0.8\duct-tape-1.0.8.jar;C:\Users\user\.m2\repository\com\github\docker-java\docker-java-api\3.3.4\docker-java-api-3.3.4.jar;C:\Users\user\.m2\repository\com\github\docker-java\docker-java-transport-zerodep\3.3.4\docker-java-transport-zerodep-3.3.4.jar;C:\Users\user\.m2\repository\com\github\docker-java\docker-java-transport\3.3.4\docker-java-transport-3.3.4.jar;C:\Users\user\.m2\repository\net\java\dev\jna\jna\5.13.0\jna-5.13.0.jar;C:\Users\user\.m2\repository\org\testcontainers\junit-jupiter\1.19.5\junit-jupiter-1.19.5.jar;C:\Users\user\.m2\repository\org\awaitility\awaitility\4.2.0\awaitility-4.2.0.jar;C:\Users\user\.m2\repository\org\testcontainers\hivemq\1.19.3\hivemq-1.19.3.jar;C:\Users\user\.m2\repository\org\jetbrains\annotations\24.0.1\annotations-24.0.1.jar;C:\Users\user\.m2\repository\org\testcontainers\kafka\1.19.5\kafka-1.19.5.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="user.timezone" value="Europe/Paris"/>
+    <property name="org.jboss.logging.provider" value="slf4j"/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="java.vm.specification.version" value="17"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="FR"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-17\bin"/>
+    <property name="sun.java.command" value="C:\Users\user\AppData\Local\Temp\surefire7628317875114896074\surefirebooter-20250207144626220_3.jar C:\Users\user\AppData\Local\Temp\surefire7628317875114896074 2025-02-07T14-46-25_825-jvmRun1 surefire-20250207144626220_1tmp surefire_0-20250207144626220_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="C:\Users\user\Documents\taoufik_project\reactive\reactive\target\test-classes;C:\Users\user\Documents\taoufik_project\reactive\reactive\target\classes;C:\Users\user\.m2\repository\org\springframework\boot\spring-boot-starter-webflux\3.2.3\spring-boot-starter-webflux-3.2.3.jar;C:\Users\user\.m2\repository\org\springframework\boot\spring-boot-starter\3.2.3\spring-boot-starter-3.2.3.jar;C:\Users\user\.m2\repository\org\springframework\boot\spring-boot\3.2.3\spring-boot-3.2.3.jar;C:\Users\user\.m2\repository\org\springframework\boot\spring-boot-autoconfigure\3.2.3\spring-boot-autoconfigure-3.2.3.jar;C:\Users\user\.m2\repository\org\springframework\boot\spring-boot-starter-logging\3.2.3\spring-boot-starter-logging-3.2.3.jar;C:\Users\user\.m2\repository\org\apache\logging\log4j\log4j-to-slf4j\2.21.1\log4j-to-slf4j-2.21.1.jar;C:\Users\user\.m2\repository\org\apache\logging\log4j\log4j-api\2.21.1\log4j-api-2.21.1.jar;C:\Users\user\.m2\repository\org\slf4j\jul-to-slf4j\2.0.12\jul-to-slf4j-2.0.12.jar;C:\Users\user\.m2\repository\jakarta\annotation\jakarta.annotation-api\2.1.1\jakarta.annotation-api-2.1.1.jar;C:\Users\user\.m2\repository\org\yaml\snakeyaml\2.2\snakeyaml-2.2.jar;C:\Users\user\.m2\repository\org\springframework\boot\spring-boot-starter-json\3.2.3\spring-boot-starter-json-3.2.3.jar;C:\Users\user\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jdk8\2.15.4\jackson-datatype-jdk8-2.15.4.jar;C:\Users\user\.m2\repository\com\fasterxml\jackson\module\jackson-module-parameter-names\2.15.4\jackson-module-parameter-names-2.15.4.jar;C:\Users\user\.m2\repository\org\springframework\boot\spring-boot-starter-reactor-netty\3.2.3\spring-boot-starter-reactor-netty-3.2.3.jar;C:\Users\user\.m2\repository\io\projectreactor\netty\reactor-netty-http\1.1.16\reactor-netty-http-1.1.16.jar;C:\Users\user\.m2\repository\io\netty\netty-codec-http\4.1.107.Final\netty-codec-http-4.1.107.Final.jar;C:\Users\user\.m2\repository\io\netty\netty-codec-http2\4.1.107.Final\netty-codec-http2-4.1.107.Final.jar;C:\Users\user\.m2\repository\io\netty\netty-resolver-dns\4.1.107.Final\netty-resolver-dns-4.1.107.Final.jar;C:\Users\user\.m2\repository\io\netty\netty-codec-dns\4.1.107.Final\netty-codec-dns-4.1.107.Final.jar;C:\Users\user\.m2\repository\io\netty\netty-resolver-dns-native-macos\4.1.107.Final\netty-resolver-dns-native-macos-4.1.107.Final-osx-x86_64.jar;C:\Users\user\.m2\repository\io\netty\netty-resolver-dns-classes-macos\4.1.107.Final\netty-resolver-dns-classes-macos-4.1.107.Final.jar;C:\Users\user\.m2\repository\io\netty\netty-transport-native-epoll\4.1.107.Final\netty-transport-native-epoll-4.1.107.Final-linux-x86_64.jar;C:\Users\user\.m2\repository\io\projectreactor\netty\reactor-netty-core\1.1.16\reactor-netty-core-1.1.16.jar;C:\Users\user\.m2\repository\io\netty\netty-handler-proxy\4.1.107.Final\netty-handler-proxy-4.1.107.Final.jar;C:\Users\user\.m2\repository\io\netty\netty-codec-socks\4.1.107.Final\netty-codec-socks-4.1.107.Final.jar;C:\Users\user\.m2\repository\org\springframework\spring-web\6.1.4\spring-web-6.1.4.jar;C:\Users\user\.m2\repository\org\springframework\spring-beans\6.1.4\spring-beans-6.1.4.jar;C:\Users\user\.m2\repository\org\springframework\spring-webflux\6.1.4\spring-webflux-6.1.4.jar;C:\Users\user\.m2\repository\org\springframework\boot\spring-boot-starter-data-mongodb-reactive\3.2.3\spring-boot-starter-data-mongodb-reactive-3.2.3.jar;C:\Users\user\.m2\repository\io\projectreactor\reactor-core\3.6.3\reactor-core-3.6.3.jar;C:\Users\user\.m2\repository\org\reactivestreams\reactive-streams\1.0.4\reactive-streams-1.0.4.jar;C:\Users\user\.m2\repository\org\mongodb\mongodb-driver-reactivestreams\4.11.1\mongodb-driver-reactivestreams-4.11.1.jar;C:\Users\user\.m2\repository\org\mongodb\bson\4.11.1\bson-4.11.1.jar;C:\Users\user\.m2\repository\org\mongodb\mongodb-driver-core\4.11.1\mongodb-driver-core-4.11.1.jar;C:\Users\user\.m2\repository\org\mongodb\bson-record-codec\4.11.1\bson-record-codec-4.11.1.jar;C:\Users\user\.m2\repository\org\springframework\data\spring-data-mongodb\4.2.3\spring-data-mongodb-4.2.3.jar;C:\Users\user\.m2\repository\org\springframework\spring-expression\6.1.4\spring-expression-6.1.4.jar;C:\Users\user\.m2\repository\org\springframework\data\spring-data-commons\3.2.3\spring-data-commons-3.2.3.jar;C:\Users\user\.m2\repository\org\slf4j\slf4j-api\2.0.12\slf4j-api-2.0.12.jar;C:\Users\user\.m2\repository\org\springframework\boot\spring-boot-starter-validation\3.2.3\spring-boot-starter-validation-3.2.3.jar;C:\Users\user\.m2\repository\org\apache\tomcat\embed\tomcat-embed-el\10.1.19\tomcat-embed-el-10.1.19.jar;C:\Users\user\.m2\repository\org\hibernate\validator\hibernate-validator\8.0.1.Final\hibernate-validator-8.0.1.Final.jar;C:\Users\user\.m2\repository\jakarta\validation\jakarta.validation-api\3.0.2\jakarta.validation-api-3.0.2.jar;C:\Users\user\.m2\repository\org\jboss\logging\jboss-logging\3.5.3.Final\jboss-logging-3.5.3.Final.jar;C:\Users\user\.m2\repository\com\fasterxml\classmate\1.6.0\classmate-1.6.0.jar;C:\Users\user\.m2\repository\org\springframework\kafka\spring-kafka\3.1.2\spring-kafka-3.1.2.jar;C:\Users\user\.m2\repository\org\springframework\spring-context\6.1.4\spring-context-6.1.4.jar;C:\Users\user\.m2\repository\org\springframework\spring-aop\6.1.4\spring-aop-6.1.4.jar;C:\Users\user\.m2\repository\org\springframework\spring-messaging\6.1.4\spring-messaging-6.1.4.jar;C:\Users\user\.m2\repository\org\springframework\spring-tx\6.1.4\spring-tx-6.1.4.jar;C:\Users\user\.m2\repository\org\springframework\retry\spring-retry\2.0.5\spring-retry-2.0.5.jar;C:\Users\user\.m2\repository\org\apache\kafka\kafka-clients\3.6.1\kafka-clients-3.6.1.jar;C:\Users\user\.m2\repository\com\github\luben\zstd-jni\1.5.5-1\zstd-jni-1.5.5-1.jar;C:\Users\user\.m2\repository\org\lz4\lz4-java\1.8.0\lz4-java-1.8.0.jar;C:\Users\user\.m2\repository\org\xerial\snappy\snappy-java\1.1.10.5\snappy-java-1.1.10.5.jar;C:\Users\user\.m2\repository\io\micrometer\micrometer-observation\1.12.3\micrometer-observation-1.12.3.jar;C:\Users\user\.m2\repository\io\micrometer\micrometer-commons\1.12.3\micrometer-commons-1.12.3.jar;C:\Users\user\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;C:\Users\user\.m2\repository\io\projectreactor\kafka\reactor-kafka\1.3.23\reactor-kafka-1.3.23.jar;C:\Users\user\.m2\repository\org\eclipse\paho\org.eclipse.paho.client.mqttv3\1.2.5\org.eclipse.paho.client.mqttv3-1.2.5.jar;C:\Users\user\.m2\repository\org\springframework\integration\spring-integration-mqtt\6.2.2\spring-integration-mqtt-6.2.2.jar;C:\Users\user\.m2\repository\org\springframework\integration\spring-integration-core\6.2.2\spring-integration-core-6.2.2.jar;C:\Users\user\.m2\repository\org\springdoc\springdoc-openapi-starter-webflux-ui\2.3.0\springdoc-openapi-starter-webflux-ui-2.3.0.jar;C:\Users\user\.m2\repository\org\springdoc\springdoc-openapi-starter-webflux-api\2.3.0\springdoc-openapi-starter-webflux-api-2.3.0.jar;C:\Users\user\.m2\repository\org\springdoc\springdoc-openapi-starter-common\2.3.0\springdoc-openapi-starter-common-2.3.0.jar;C:\Users\user\.m2\repository\io\swagger\core\v3\swagger-core-jakarta\2.2.19\swagger-core-jakarta-2.2.19.jar;C:\Users\user\.m2\repository\org\apache\commons\commons-lang3\3.13.0\commons-lang3-3.13.0.jar;C:\Users\user\.m2\repository\io\swagger\core\v3\swagger-annotations-jakarta\2.2.19\swagger-annotations-jakarta-2.2.19.jar;C:\Users\user\.m2\repository\io\swagger\core\v3\swagger-models-jakarta\2.2.19\swagger-models-jakarta-2.2.19.jar;C:\Users\user\.m2\repository\com\fasterxml\jackson\dataformat\jackson-dataformat-yaml\2.15.4\jackson-dataformat-yaml-2.15.4.jar;C:\Users\user\.m2\repository\org\webjars\swagger-ui\5.10.3\swagger-ui-5.10.3.jar;C:\Users\user\.m2\repository\org\projectlombok\lombok\1.18.30\lombok-1.18.30.jar;C:\Users\user\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.15.4\jackson-datatype-jsr310-2.15.4.jar;C:\Users\user\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.15.4\jackson-annotations-2.15.4.jar;C:\Users\user\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.15.4\jackson-core-2.15.4.jar;C:\Users\user\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.15.4\jackson-databind-2.15.4.jar;C:\Users\user\.m2\repository\org\springframework\boot\spring-boot-starter-test\3.2.3\spring-boot-starter-test-3.2.3.jar;C:\Users\user\.m2\repository\org\springframework\boot\spring-boot-test\3.2.3\spring-boot-test-3.2.3.jar;C:\Users\user\.m2\repository\org\springframework\boot\spring-boot-test-autoconfigure\3.2.3\spring-boot-test-autoconfigure-3.2.3.jar;C:\Users\user\.m2\repository\com\jayway\jsonpath\json-path\2.9.0\json-path-2.9.0.jar;C:\Users\user\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\4.0.1\jakarta.xml.bind-api-4.0.1.jar;C:\Users\user\.m2\repository\jakarta\activation\jakarta.activation-api\2.1.2\jakarta.activation-api-2.1.2.jar;C:\Users\user\.m2\repository\net\minidev\json-smart\2.5.0\json-smart-2.5.0.jar;C:\Users\user\.m2\repository\net\minidev\accessors-smart\2.5.0\accessors-smart-2.5.0.jar;C:\Users\user\.m2\repository\org\ow2\asm\asm\9.3\asm-9.3.jar;C:\Users\user\.m2\repository\org\assertj\assertj-core\3.24.2\assertj-core-3.24.2.jar;C:\Users\user\.m2\repository\net\bytebuddy\byte-buddy\1.14.12\byte-buddy-1.14.12.jar;C:\Users\user\.m2\repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;C:\Users\user\.m2\repository\org\junit\jupiter\junit-jupiter\5.10.2\junit-jupiter-5.10.2.jar;C:\Users\user\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.2\junit-jupiter-params-5.10.2.jar;C:\Users\user\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.2\junit-jupiter-engine-5.10.2.jar;C:\Users\user\.m2\repository\org\mockito\mockito-core\5.7.0\mockito-core-5.7.0.jar;C:\Users\user\.m2\repository\net\bytebuddy\byte-buddy-agent\1.14.12\byte-buddy-agent-1.14.12.jar;C:\Users\user\.m2\repository\org\objenesis\objenesis\3.3\objenesis-3.3.jar;C:\Users\user\.m2\repository\org\mockito\mockito-junit-jupiter\5.7.0\mockito-junit-jupiter-5.7.0.jar;C:\Users\user\.m2\repository\org\skyscreamer\jsonassert\1.5.1\jsonassert-1.5.1.jar;C:\Users\user\.m2\repository\com\vaadin\external\google\android-json\0.0.20131108.vaadin1\android-json-0.0.20131108.vaadin1.jar;C:\Users\user\.m2\repository\org\springframework\spring-core\6.1.4\spring-core-6.1.4.jar;C:\Users\user\.m2\repository\org\springframework\spring-jcl\6.1.4\spring-jcl-6.1.4.jar;C:\Users\user\.m2\repository\org\springframework\spring-test\6.1.4\spring-test-6.1.4.jar;C:\Users\user\.m2\repository\org\xmlunit\xmlunit-core\2.9.1\xmlunit-core-2.9.1.jar;C:\Users\user\.m2\repository\io\projectreactor\reactor-test\3.6.3\reactor-test-3.6.3.jar;C:\Users\user\.m2\repository\org\springframework\kafka\spring-kafka-test\3.1.2\spring-kafka-test-3.1.2.jar;C:\Users\user\.m2\repository\org\apache\zookeeper\zookeeper\3.8.3\zookeeper-3.8.3.jar;C:\Users\user\.m2\repository\org\apache\zookeeper\zookeeper-jute\3.8.3\zookeeper-jute-3.8.3.jar;C:\Users\user\.m2\repository\org\apache\yetus\audience-annotations\0.12.0\audience-annotations-0.12.0.jar;C:\Users\user\.m2\repository\io\netty\netty-handler\4.1.107.Final\netty-handler-4.1.107.Final.jar;C:\Users\user\.m2\repository\io\netty\netty-common\4.1.107.Final\netty-common-4.1.107.Final.jar;C:\Users\user\.m2\repository\io\netty\netty-resolver\4.1.107.Final\netty-resolver-4.1.107.Final.jar;C:\Users\user\.m2\repository\io\netty\netty-buffer\4.1.107.Final\netty-buffer-4.1.107.Final.jar;C:\Users\user\.m2\repository\io\netty\netty-transport\4.1.107.Final\netty-transport-4.1.107.Final.jar;C:\Users\user\.m2\repository\io\netty\netty-transport-native-unix-common\4.1.107.Final\netty-transport-native-unix-common-4.1.107.Final.jar;C:\Users\user\.m2\repository\io\netty\netty-codec\4.1.107.Final\netty-codec-4.1.107.Final.jar;C:\Users\user\.m2\repository\io\netty\netty-transport-native-epoll\4.1.107.Final\netty-transport-native-epoll-4.1.107.Final.jar;C:\Users\user\.m2\repository\io\netty\netty-transport-classes-epoll\4.1.107.Final\netty-transport-classes-epoll-4.1.107.Final.jar;C:\Users\user\.m2\repository\ch\qos\logback\logback-core\1.4.14\logback-core-1.4.14.jar;C:\Users\user\.m2\repository\ch\qos\logback\logback-classic\1.4.14\logback-classic-1.4.14.jar;C:\Users\user\.m2\repository\commons-io\commons-io\2.11.0\commons-io-2.11.0.jar;C:\Users\user\.m2\repository\org\apache\kafka\kafka-clients\3.6.1\kafka-clients-3.6.1-test.jar;C:\Users\user\.m2\repository\org\apache\kafka\kafka-metadata\3.6.1\kafka-metadata-3.6.1.jar;C:\Users\user\.m2\repository\org\apache\kafka\kafka-raft\3.6.1\kafka-raft-3.6.1.jar;C:\Users\user\.m2\repository\com\yammer\metrics\metrics-core\2.2.0\metrics-core-2.2.0.jar;C:\Users\user\.m2\repository\org\apache\kafka\kafka-server-common\3.6.1\kafka-server-common-3.6.1.jar;C:\Users\user\.m2\repository\net\sf\jopt-simple\jopt-simple\5.0.4\jopt-simple-5.0.4.jar;C:\Users\user\.m2\repository\org\pcollections\pcollections\4.0.1\pcollections-4.0.1.jar;C:\Users\user\.m2\repository\org\apache\kafka\kafka-server-common\3.6.1\kafka-server-common-3.6.1-test.jar;C:\Users\user\.m2\repository\org\apache\kafka\kafka-streams-test-utils\3.6.1\kafka-streams-test-utils-3.6.1.jar;C:\Users\user\.m2\repository\org\apache\kafka\kafka-streams\3.6.1\kafka-streams-3.6.1.jar;C:\Users\user\.m2\repository\org\rocksdb\rocksdbjni\7.9.2\rocksdbjni-7.9.2.jar;C:\Users\user\.m2\repository\org\apache\kafka\kafka_2.13\3.6.1\kafka_2.13-3.6.1.jar;C:\Users\user\.m2\repository\org\scala-lang\scala-library\2.13.11\scala-library-2.13.11.jar;C:\Users\user\.m2\repository\org\apache\kafka\kafka-group-coordinator\3.6.1\kafka-group-coordinator-3.6.1.jar;C:\Users\user\.m2\repository\org\apache\kafka\kafka-storage-api\3.6.1\kafka-storage-api-3.6.1.jar;C:\Users\user\.m2\repository\org\apache\kafka\kafka-tools-api\3.6.1\kafka-tools-api-3.6.1.jar;C:\Users\user\.m2\repository\org\apache\kafka\kafka-storage\3.6.1\kafka-storage-3.6.1.jar;C:\Users\user\.m2\repository\com\github\ben-manes\caffeine\caffeine\3.1.8\caffeine-3.1.8.jar;C:\Users\user\.m2\repository\org\checkerframework\checker-qual\3.37.0\checker-qual-3.37.0.jar;C:\Users\user\.m2\repository\com\google\errorprone\error_prone_annotations\2.21.1\error_prone_annotations-2.21.1.jar;C:\Users\user\.m2\repository\net\sourceforge\argparse4j\argparse4j\0.7.0\argparse4j-0.7.0.jar;C:\Users\user\.m2\repository\commons-validator\commons-validator\1.7\commons-validator-1.7.jar;C:\Users\user\.m2\repository\commons-beanutils\commons-beanutils\1.9.4\commons-beanutils-1.9.4.jar;C:\Users\user\.m2\repository\commons-digester\commons-digester\2.1\commons-digester-2.1.jar;C:\Users\user\.m2\repository\commons-collections\commons-collections\3.2.2\commons-collections-3.2.2.jar;C:\Users\user\.m2\repository\com\fasterxml\jackson\module\jackson-module-scala_2.13\2.15.4\jackson-module-scala_2.13-2.15.4.jar;C:\Users\user\.m2\repository\com\thoughtworks\paranamer\paranamer\2.8\paranamer-2.8.jar;C:\Users\user\.m2\repository\com\fasterxml\jackson\dataformat\jackson-dataformat-csv\2.15.4\jackson-dataformat-csv-2.15.4.jar;C:\Users\user\.m2\repository\org\bitbucket\b_c\jose4j\0.9.3\jose4j-0.9.3.jar;C:\Users\user\.m2\repository\org\scala-lang\modules\scala-collection-compat_2.13\2.10.0\scala-collection-compat_2.13-2.10.0.jar;C:\Users\user\.m2\repository\org\scala-lang\modules\scala-java8-compat_2.13\1.0.2\scala-java8-compat_2.13-1.0.2.jar;C:\Users\user\.m2\repository\org\scala-lang\scala-reflect\2.13.11\scala-reflect-2.13.11.jar;C:\Users\user\.m2\repository\com\typesafe\scala-logging\scala-logging_2.13\3.9.4\scala-logging_2.13-3.9.4.jar;C:\Users\user\.m2\repository\io\dropwizard\metrics\metrics-core\4.2.25\metrics-core-4.2.25.jar;C:\Users\user\.m2\repository\commons-cli\commons-cli\1.4\commons-cli-1.4.jar;C:\Users\user\.m2\repository\org\apache\kafka\kafka_2.13\3.6.1\kafka_2.13-3.6.1-test.jar;C:\Users\user\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.2\junit-jupiter-api-5.10.2.jar;C:\Users\user\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\user\.m2\repository\org\junit\platform\junit-platform-commons\1.10.2\junit-platform-commons-1.10.2.jar;C:\Users\user\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\user\.m2\repository\org\junit\platform\junit-platform-launcher\1.10.2\junit-platform-launcher-1.10.2.jar;C:\Users\user\.m2\repository\org\junit\platform\junit-platform-engine\1.10.2\junit-platform-engine-1.10.2.jar;C:\Users\user\.m2\repository\org\testcontainers\mongodb\1.19.5\mongodb-1.19.5.jar;C:\Users\user\.m2\repository\org\testcontainers\testcontainers\1.19.5\testcontainers-1.19.5.jar;C:\Users\user\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\user\.m2\repository\org\hamcrest\hamcrest-core\2.2\hamcrest-core-2.2.jar;C:\Users\user\.m2\repository\org\apache\commons\commons-compress\1.24.0\commons-compress-1.24.0.jar;C:\Users\user\.m2\repository\org\rnorth\duct-tape\duct-tape\1.0.8\duct-tape-1.0.8.jar;C:\Users\user\.m2\repository\com\github\docker-java\docker-java-api\3.3.4\docker-java-api-3.3.4.jar;C:\Users\user\.m2\repository\com\github\docker-java\docker-java-transport-zerodep\3.3.4\docker-java-transport-zerodep-3.3.4.jar;C:\Users\user\.m2\repository\com\github\docker-java\docker-java-transport\3.3.4\docker-java-transport-3.3.4.jar;C:\Users\user\.m2\repository\net\java\dev\jna\jna\5.13.0\jna-5.13.0.jar;C:\Users\user\.m2\repository\org\testcontainers\junit-jupiter\1.19.5\junit-jupiter-1.19.5.jar;C:\Users\user\.m2\repository\org\awaitility\awaitility\4.2.0\awaitility-4.2.0.jar;C:\Users\user\.m2\repository\org\testcontainers\hivemq\1.19.3\hivemq-1.19.3.jar;C:\Users\user\.m2\repository\org\jetbrains\annotations\24.0.1\annotations-24.0.1.jar;C:\Users\user\.m2\repository\org\testcontainers\kafka\1.19.5\kafka-1.19.5.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\user"/>
+    <property name="user.language" value="fr"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2024-07-16"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk-17"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="C:\Users\user\Documents\taoufik_project\reactive\reactive"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="FILE_LOG_CHARSET" value="windows-1252"/>
+    <property name="java.awt.headless" value="true"/>
+    <property name="surefire.real.class.path" value="C:\Users\user\AppData\Local\Temp\surefire7628317875114896074\surefirebooter-20250207144626220_3.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="17.0.12+8-LTS-286"/>
+    <property name="user.name" value="user"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="C:\Users\user\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\user\AppData\Local\Temp\"/>
+    <property name="idea.version" value="2024.3.1.1"/>
+    <property name="java.version" value="17.0.12"/>
+    <property name="user.dir" value="C:\Users\user\Documents\taoufik_project\reactive\reactive"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="PID" value="3720"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="CONSOLE_LOG_CHARSET" value="windows-1252"/>
+    <property name="native.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-17\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;c:\Users\user\AppData\Local\Programs\cursor\resources\app\bin;C:\Program Files\Microsoft SDKs\Azure\CLI2\wbin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\Docker\Docker\resources\bin;C:\Users\user\Documents\taoufik_project\apache-maven-3.9.9\bin;C:\Program Files\nodejs\;C:\Users\user\AppData\Local\Programs\Python\Launcher\;C:\Users\user\AppData\Local\Microsoft\WindowsApps;C:\Users\user\AppData\Roaming\npm;c:\Users\user\AppData\Local\Programs\cursor\resources\app\bin;C:\Program Files\Java\jdk-17\bin;%HADOOP_HOME%\bin;C:\hadoop\bin;C:\Users\user\AppData\Local\Programs\Python\Launcher\;C:\Users\user\AppData\Local\Microsoft\WindowsApps;C:\Users\user\AppData\Roaming\npm;C:\Program Files\Java\jdk-17\bin;C:\hadoop\bin;C:\hadoop\bin;;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="17.0.12+8-LTS-286"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="61.0"/>
+  </properties>
+  <testcase name="shouldPublishAndConsumeVehicleData" classname="com.example.kafka.KafkaIntegrationTest" time="33.773">
+    <failure message="expectation &quot;expectNextMatches&quot; failed (expected: onNext(); actual: onError(java.util.concurrent.TimeoutException: Did not observe any item or terminal signal within 30000ms in &apos;limitRequest&apos; (and no fallback has been configured)))" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expectation "expectNextMatches" failed (expected: onNext(); actual: onError(java.util.concurrent.TimeoutException: Did not observe any item or terminal signal within 30000ms in 'limitRequest' (and no fallback has been configured)))
+	at reactor.test.MessageFormatter.assertionError(MessageFormatter.java:115)
+	at reactor.test.MessageFormatter.failPrefix(MessageFormatter.java:104)
+	at reactor.test.MessageFormatter.fail(MessageFormatter.java:73)
+	at reactor.test.MessageFormatter.failOptional(MessageFormatter.java:88)
+	at reactor.test.DefaultStepVerifierBuilder.lambda$expectNextMatches$11(DefaultStepVerifierBuilder.java:556)
+	at reactor.test.DefaultStepVerifierBuilder$SignalEvent.test(DefaultStepVerifierBuilder.java:2289)
+	at reactor.test.DefaultStepVerifierBuilder$DefaultVerifySubscriber.onSignal(DefaultStepVerifierBuilder.java:1529)
+	at reactor.test.DefaultStepVerifierBuilder$DefaultVerifySubscriber.onExpectation(DefaultStepVerifierBuilder.java:1477)
+	at reactor.test.DefaultStepVerifierBuilder$DefaultVerifySubscriber.onError(DefaultStepVerifierBuilder.java:1129)
+	at reactor.core.publisher.SerializedSubscriber.onError(SerializedSubscriber.java:124)
+	at reactor.core.publisher.FluxTimeout$TimeoutMainSubscriber.handleTimeout(FluxTimeout.java:296)
+	at reactor.core.publisher.FluxTimeout$TimeoutMainSubscriber.doTimeout(FluxTimeout.java:281)
+	at reactor.core.publisher.FluxTimeout$TimeoutTimeoutSubscriber.onNext(FluxTimeout.java:420)
+	at reactor.core.publisher.FluxOnErrorReturn$ReturnSubscriber.onNext(FluxOnErrorReturn.java:162)
+	at reactor.core.publisher.MonoDelay$MonoDelayRunnable.propagateDelay(MonoDelay.java:270)
+	at reactor.core.publisher.MonoDelay$MonoDelayRunnable.run(MonoDelay.java:285)
+	at reactor.core.scheduler.SchedulerTask.call(SchedulerTask.java:68)
+	at reactor.core.scheduler.SchedulerTask.call(SchedulerTask.java:28)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+	Suppressed: java.util.concurrent.TimeoutException: Did not observe any item or terminal signal within 30000ms in 'limitRequest' (and no fallback has been configured)
+		... 13 more
+]]></failure>
+    <system-out><![CDATA[2025-02-07T14:46:37.441+01:00  INFO 3720 --- [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.kafka.KafkaIntegrationTest]: KafkaIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-02-07T14:46:37.491+01:00  INFO 3720 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.ReactiveApplication for test class com.example.kafka.KafkaIntegrationTest
+2025-02-07T14:46:37.655+01:00  INFO 3720 --- [           main] org.testcontainers.images.PullPolicy     : Image pull policy will be performed by: DefaultPullPolicy()
+2025-02-07T14:46:37.667+01:00  INFO 3720 --- [           main] o.t.utility.ImageNameSubstitutor         : Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+2025-02-07T14:46:38.423+01:00  INFO 3720 --- [           main] o.t.d.DockerClientProviderStrategy       : Loaded org.testcontainers.dockerclient.NpipeSocketClientProviderStrategy from ~/.testcontainers.properties, will try it first
+2025-02-07T14:46:39.068+01:00  INFO 3720 --- [           main] o.t.d.DockerClientProviderStrategy       : Found Docker environment with local Npipe socket (npipe:////./pipe/docker_engine)
+2025-02-07T14:46:39.078+01:00  INFO 3720 --- [           main] org.testcontainers.DockerClientFactory   : Docker host IP address is localhost
+2025-02-07T14:46:39.120+01:00  INFO 3720 --- [           main] org.testcontainers.DockerClientFactory   : Connected to docker: 
+  Server Version: 27.3.1
+  API Version: 1.47
+  Operating System: Docker Desktop
+  Total Memory: 7884 MB
+2025-02-07T14:46:39.467+01:00  INFO 3720 --- [           main] tc.testcontainers/ryuk:0.6.0             : Creating container for image: testcontainers/ryuk:0.6.0
+2025-02-07T14:46:40.149+01:00  INFO 3720 --- [           main] tc.testcontainers/ryuk:0.6.0             : Container testcontainers/ryuk:0.6.0 is starting: 9a2412d69be42d5bc1e9051e331857a6d0e78ebb66102f80d3f3726de925053a
+2025-02-07T14:46:41.037+01:00  INFO 3720 --- [           main] tc.testcontainers/ryuk:0.6.0             : Container testcontainers/ryuk:0.6.0 started in PT1.5700776S
+2025-02-07T14:46:41.049+01:00  INFO 3720 --- [           main] o.t.utility.RyukResourceReaper           : Ryuk started - will monitor and terminate Testcontainers containers on JVM exit
+2025-02-07T14:46:41.050+01:00  INFO 3720 --- [           main] org.testcontainers.DockerClientFactory   : Checking the system...
+2025-02-07T14:46:41.051+01:00  INFO 3720 --- [           main] org.testcontainers.DockerClientFactory   : ?? Docker server version should be at least 1.6.0
+2025-02-07T14:46:41.053+01:00  INFO 3720 --- [           main] tc.wurstmeister/zookeeper:latest         : Creating container for image: wurstmeister/zookeeper:latest
+2025-02-07T14:46:41.425+01:00  INFO 3720 --- [           main] tc.wurstmeister/zookeeper:latest         : Container wurstmeister/zookeeper:latest is starting: 191f0eb5c8dd65ac364988315c53e30c8f974aca6e3c2cd11cb71c9562400eb2
+2025-02-07T14:46:42.698+01:00  INFO 3720 --- [           main] tc.wurstmeister/zookeeper:latest         : Container wurstmeister/zookeeper:latest started in PT1.6451813S
+2025-02-07T14:46:42.702+01:00  INFO 3720 --- [           main] tc.wurstmeister/kafka:latest             : Creating container for image: wurstmeister/kafka:latest
+2025-02-07T14:46:42.952+01:00  INFO 3720 --- [           main] tc.wurstmeister/kafka:latest             : Container wurstmeister/kafka:latest is starting: 71a9e9f5c3d38743308b7881fc25593bd416d80c65666feb56b55875f64017bb
+2025-02-07T14:46:48.377+01:00  INFO 3720 --- [           main] tc.wurstmeister/kafka:latest             : Container wurstmeister/kafka:latest started in PT5.6747771S
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.3)
+
+2025-02-07T14:46:48.583+01:00  INFO 3720 --- [           main] com.example.kafka.KafkaIntegrationTest   : Starting KafkaIntegrationTest using Java 17.0.12 with PID 3720 (started by user in C:\Users\user\Documents\taoufik_project\reactive\reactive)
+2025-02-07T14:46:48.585+01:00  INFO 3720 --- [           main] com.example.kafka.KafkaIntegrationTest   : The following 1 profile is active: "test"
+2025-02-07T14:46:50.715+01:00  INFO 3720 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Reactive MongoDB repositories in DEFAULT mode.
+2025-02-07T14:46:50.888+01:00  INFO 3720 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 156 ms. Found 5 Reactive MongoDB repository interfaces.
+2025-02-07T14:46:51.144+01:00  INFO 3720 --- [           main] faultConfiguringBeanFactoryPostProcessor : No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2025-02-07T14:46:51.179+01:00  INFO 3720 --- [           main] faultConfiguringBeanFactoryPostProcessor : No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2025-02-07T14:46:52.304+01:00  INFO 3720 --- [           main] org.mongodb.driver.client                : MongoClient with metadata {"driver": {"name": "mongo-java-driver|reactive-streams|spring-boot", "version": "4.11.1"}, "os": {"type": "Windows", "name": "Windows 10", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/17.0.12+8-LTS-286"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, transportSettings=NettyTransportSettings{eventLoopGroup=io.netty.channel.nio.NioEventLoopGroup@222a7429, socketChannelClass=null, allocator=null, sslContext=null}, streamFactoryFactory=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@22a8c837, com.mongodb.Jep395RecordCodecProvider@5f596a1a, com.mongodb.KotlinCodecProvider@62977afb]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null}
+2025-02-07T14:46:52.747+01:00  INFO 3720 --- [localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=236779900}
+2025-02-07T14:46:58.943+01:00  INFO 3720 --- [           main] o.s.i.endpoint.EventDrivenConsumer       : Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2025-02-07T14:46:58.947+01:00  INFO 3720 --- [           main] o.s.i.channel.PublishSubscribeChannel    : Channel 'application.errorChannel' has 1 subscriber(s).
+2025-02-07T14:46:58.954+01:00  INFO 3720 --- [           main] o.s.i.endpoint.EventDrivenConsumer       : started bean '_org.springframework.integration.errorLogger'
+2025-02-07T14:46:58.991+01:00  INFO 3720 --- [           main] com.example.kafka.KafkaIntegrationTest   : Started KafkaIntegrationTest in 10.604 seconds (process running for 32.365)
+2025-02-07T14:47:00.515+01:00  INFO 3720 --- [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:54213]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-test-group-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = test-group
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2025-02-07T14:47:01.254+01:00  INFO 3720 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.6.1
+2025-02-07T14:47:01.254+01:00  INFO 3720 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 5e3c2b738d253ff5
+2025-02-07T14:47:01.255+01:00  INFO 3720 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1738936021244
+2025-02-07T14:47:01.298+01:00  INFO 3720 --- [ka-test-group-1] o.a.k.clients.consumer.KafkaConsumer     : [Consumer clientId=consumer-test-group-1, groupId=test-group] Subscribed to topic(s): vehicle-data
+Consumer subscribed
+Test payload: {"id":null,"contractId":"CONTRACT-001","riskAssessment":null,"data":{"speed":{"value":60.0,"unit":"km/h"},"rpm":{"value":2500.0,"unit":"rpm"},"timestamp":1738936023.336871200,"THROTTLE_POS":{"value":30.0,"unit":"%"},"FUEL_LEVEL":{"value":75.0,"unit":"%"},"MAF":{"value":85.05,"unit":"g/s"},"ENGINE_LOAD":{"value":50.0,"unit":"%"},"FUEL_RATE":{"value":0.0,"unit":"L/h"},"INTAKE_PRESSURE":{"value":140.02,"unit":"kPa"},"ACCELERATOR_POS_D":{"value":100.0,"unit":"%"},"BAROMETRIC_PRESSURE":{"value":96.28,"unit":"kPa"}},"timestamp":1738936023.336871200,"vehicle_id":"TEST-001"}
+2025-02-07T14:47:03.396+01:00  INFO 3720 --- [           main] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [localhost:54213]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+2025-02-07T14:47:03.425+01:00  INFO 3720 --- [           main] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-1] Instantiated an idempotent producer.
+2025-02-07T14:47:03.471+01:00  INFO 3720 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.6.1
+2025-02-07T14:47:03.471+01:00  INFO 3720 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 5e3c2b738d253ff5
+2025-02-07T14:47:03.471+01:00  INFO 3720 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1738936023471
+2025-02-07T14:47:03.602+01:00  WARN 3720 --- [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Error while fetching metadata with correlation id 1 : {vehicle-data=UNKNOWN_TOPIC_OR_PARTITION}
+2025-02-07T14:47:03.606+01:00  INFO 3720 --- [ad | producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=producer-1] Cluster ID: GaYArhOTQRi1oiirOGHXoA
+2025-02-07T14:47:03.612+01:00  WARN 3720 --- [ka-test-group-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-test-group-1, groupId=test-group] Error while fetching metadata with correlation id 2 : {vehicle-data=LEADER_NOT_AVAILABLE}
+2025-02-07T14:47:03.612+01:00  INFO 3720 --- [ka-test-group-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-test-group-1, groupId=test-group] Cluster ID: GaYArhOTQRi1oiirOGHXoA
+2025-02-07T14:47:03.615+01:00  INFO 3720 --- [ad | producer-1] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=producer-1] ProducerId set to 0 with epoch 0
+2025-02-07T14:47:03.750+01:00  INFO 3720 --- [ka-test-group-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-test-group-1, groupId=test-group] Cluster ID: GGLNQ6VIQfCi7VStN408qA
+2025-02-07T14:47:03.750+01:00  INFO 3720 --- [ad | producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=producer-1] Cluster ID: GGLNQ6VIQfCi7VStN408qA
+2025-02-07T14:47:03.786+01:00  INFO 3720 --- [ka-test-group-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-test-group-1, groupId=test-group] Discovered group coordinator localhost:9092 (id: 2147482646 rack: null)
+2025-02-07T14:47:03.789+01:00  INFO 3720 --- [ka-test-group-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-test-group-1, groupId=test-group] (Re-)joining group
+2025-02-07T14:47:03.831+01:00  INFO 3720 --- [ka-test-group-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-test-group-1, groupId=test-group] Request joining group due to: need to re-join with the given member-id: consumer-test-group-1-b72a36cb-83e2-45c7-a71e-eeef3959f50a
+2025-02-07T14:47:03.832+01:00  INFO 3720 --- [ka-test-group-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-test-group-1, groupId=test-group] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException)
+2025-02-07T14:47:03.832+01:00  INFO 3720 --- [ka-test-group-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-test-group-1, groupId=test-group] (Re-)joining group
+2025-02-07T14:47:03.854+01:00  INFO 3720 --- [ka-test-group-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-test-group-1, groupId=test-group] Successfully joined group with generation Generation{generationId=19, memberId='consumer-test-group-1-b72a36cb-83e2-45c7-a71e-eeef3959f50a', protocol='range'}
+Message published successfully
+2025-02-07T14:47:03.879+01:00  INFO 3720 --- [ka-test-group-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-test-group-1, groupId=test-group] Finished assignment for group at generation 19: {consumer-test-group-1-b72a36cb-83e2-45c7-a71e-eeef3959f50a=Assignment(partitions=[vehicle-data-0])}
+2025-02-07T14:47:03.966+01:00  INFO 3720 --- [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:54213]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-test-group-2
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = test-group
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2025-02-07T14:47:03.968+01:00  INFO 3720 --- [ka-test-group-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-test-group-1, groupId=test-group] Successfully synced group in generation Generation{generationId=19, memberId='consumer-test-group-1-b72a36cb-83e2-45c7-a71e-eeef3959f50a', protocol='range'}
+2025-02-07T14:47:03.969+01:00  INFO 3720 --- [ka-test-group-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-test-group-1, groupId=test-group] Notifying assignor about the new Assignment(partitions=[vehicle-data-0])
+2025-02-07T14:47:03.977+01:00  INFO 3720 --- [ka-test-group-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-test-group-1, groupId=test-group] Adding newly assigned partitions: vehicle-data-0
+2025-02-07T14:47:04.017+01:00  INFO 3720 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.6.1
+2025-02-07T14:47:04.018+01:00  INFO 3720 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 5e3c2b738d253ff5
+2025-02-07T14:47:04.021+01:00  INFO 3720 --- [ka-test-group-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-test-group-1, groupId=test-group] Setting offset for partition vehicle-data-0 to the committed offset FetchPosition{offset=1, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 1001 rack: null)], epoch=0}}
+2025-02-07T14:47:04.021+01:00  INFO 3720 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1738936024017
+2025-02-07T14:47:04.027+01:00  INFO 3720 --- [ka-test-group-2] o.a.k.clients.consumer.KafkaConsumer     : [Consumer clientId=consumer-test-group-2, groupId=test-group] Subscribed to topic(s): vehicle-data
+2025-02-07T14:47:04.263+01:00  WARN 3720 --- [ka-test-group-2] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-test-group-2, groupId=test-group] Error while fetching metadata with correlation id 2 : {vehicle-data=LEADER_NOT_AVAILABLE}
+2025-02-07T14:47:04.265+01:00  INFO 3720 --- [ka-test-group-2] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-test-group-2, groupId=test-group] Cluster ID: GaYArhOTQRi1oiirOGHXoA
+2025-02-07T14:47:04.421+01:00  INFO 3720 --- [ka-test-group-2] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-test-group-2, groupId=test-group] Cluster ID: GGLNQ6VIQfCi7VStN408qA
+2025-02-07T14:47:04.435+01:00  INFO 3720 --- [ka-test-group-2] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-test-group-2, groupId=test-group] Discovered group coordinator localhost:9092 (id: 2147482646 rack: null)
+2025-02-07T14:47:04.437+01:00  INFO 3720 --- [ka-test-group-2] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-test-group-2, groupId=test-group] (Re-)joining group
+2025-02-07T14:47:04.503+01:00  INFO 3720 --- [ka-test-group-2] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-test-group-2, groupId=test-group] Request joining group due to: need to re-join with the given member-id: consumer-test-group-2-739bcbc4-52d9-4a36-9dff-b883100ba56d
+2025-02-07T14:47:04.503+01:00  INFO 3720 --- [ka-test-group-2] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-test-group-2, groupId=test-group] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException)
+2025-02-07T14:47:04.503+01:00  INFO 3720 --- [ka-test-group-2] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-test-group-2, groupId=test-group] (Re-)joining group
+2025-02-07T14:47:06.873+01:00  INFO 3720 --- [ka-test-group-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-test-group-1, groupId=test-group] Request joining group due to: group is already rebalancing
+2025-02-07T14:47:06.874+01:00  INFO 3720 --- [ka-test-group-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-test-group-1, groupId=test-group] Revoke previously assigned partitions vehicle-data-0
+2025-02-07T14:47:06.876+01:00  INFO 3720 --- [ka-test-group-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-test-group-1, groupId=test-group] (Re-)joining group
+2025-02-07T14:47:06.887+01:00  INFO 3720 --- [ka-test-group-2] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-test-group-2, groupId=test-group] Successfully joined group with generation Generation{generationId=20, memberId='consumer-test-group-2-739bcbc4-52d9-4a36-9dff-b883100ba56d', protocol='range'}
+2025-02-07T14:47:06.887+01:00  INFO 3720 --- [ka-test-group-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-test-group-1, groupId=test-group] Successfully joined group with generation Generation{generationId=20, memberId='consumer-test-group-1-b72a36cb-83e2-45c7-a71e-eeef3959f50a', protocol='range'}
+2025-02-07T14:47:06.888+01:00  INFO 3720 --- [ka-test-group-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-test-group-1, groupId=test-group] Finished assignment for group at generation 20: {consumer-test-group-1-b72a36cb-83e2-45c7-a71e-eeef3959f50a=Assignment(partitions=[vehicle-data-0]), consumer-test-group-2-739bcbc4-52d9-4a36-9dff-b883100ba56d=Assignment(partitions=[])}
+2025-02-07T14:47:06.897+01:00  INFO 3720 --- [ka-test-group-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-test-group-1, groupId=test-group] Successfully synced group in generation Generation{generationId=20, memberId='consumer-test-group-1-b72a36cb-83e2-45c7-a71e-eeef3959f50a', protocol='range'}
+2025-02-07T14:47:06.899+01:00  INFO 3720 --- [ka-test-group-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-test-group-1, groupId=test-group] Notifying assignor about the new Assignment(partitions=[vehicle-data-0])
+2025-02-07T14:47:06.899+01:00  INFO 3720 --- [ka-test-group-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-test-group-1, groupId=test-group] Adding newly assigned partitions: vehicle-data-0
+2025-02-07T14:47:06.901+01:00  INFO 3720 --- [ka-test-group-2] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-test-group-2, groupId=test-group] Successfully synced group in generation Generation{generationId=20, memberId='consumer-test-group-2-739bcbc4-52d9-4a36-9dff-b883100ba56d', protocol='range'}
+2025-02-07T14:47:06.902+01:00  INFO 3720 --- [ka-test-group-2] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-test-group-2, groupId=test-group] Notifying assignor about the new Assignment(partitions=[])
+2025-02-07T14:47:06.902+01:00  INFO 3720 --- [ka-test-group-2] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-test-group-2, groupId=test-group] Adding newly assigned partitions: 
+2025-02-07T14:47:06.905+01:00  INFO 3720 --- [ka-test-group-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-test-group-1, groupId=test-group] Setting offset for partition vehicle-data-0 to the committed offset FetchPosition{offset=1, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 1001 rack: null)], epoch=0}}
+2025-02-07T14:47:34.048+01:00  INFO 3720 --- [ka-test-group-2] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-test-group-2, groupId=test-group] Member consumer-test-group-2-739bcbc4-52d9-4a36-9dff-b883100ba56d sending LeaveGroup request to coordinator localhost:9092 (id: 2147482646 rack: null) due to the consumer is being closed
+2025-02-07T14:47:34.049+01:00  INFO 3720 --- [ka-test-group-2] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-test-group-2, groupId=test-group] Resetting generation and member id due to: consumer pro-actively leaving the group
+2025-02-07T14:47:34.050+01:00  INFO 3720 --- [ka-test-group-2] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-test-group-2, groupId=test-group] Request joining group due to: consumer pro-actively leaving the group
+2025-02-07T14:47:34.057+01:00  INFO 3720 --- [ka-test-group-2] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2025-02-07T14:47:34.057+01:00  INFO 3720 --- [ka-test-group-2] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2025-02-07T14:47:34.057+01:00  INFO 3720 --- [ka-test-group-2] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2025-02-07T14:47:34.072+01:00  INFO 3720 --- [ka-test-group-2] o.a.kafka.common.utils.AppInfoParser     : App info kafka.consumer for consumer-test-group-2 unregistered
+]]></system-out>
+  </testcase>
+</testsuite>

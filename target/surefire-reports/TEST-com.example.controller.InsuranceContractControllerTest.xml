@@ -1,0 +1,772 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.example.controller.InsuranceContractControllerTest" time="1.716" tests="4" errors="1" skipped="0" failures="2">
+  <properties>
+    <property name="java.specification.version" value="17"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="C:\Users\user\Documents\taoufik_project\reactive\reactive\target\test-classes;C:\Users\user\Documents\taoufik_project\reactive\reactive\target\classes;C:\Users\user\.m2\repository\org\springframework\boot\spring-boot-starter-webflux\3.2.3\spring-boot-starter-webflux-3.2.3.jar;C:\Users\user\.m2\repository\org\springframework\boot\spring-boot-starter\3.2.3\spring-boot-starter-3.2.3.jar;C:\Users\user\.m2\repository\org\springframework\boot\spring-boot\3.2.3\spring-boot-3.2.3.jar;C:\Users\user\.m2\repository\org\springframework\boot\spring-boot-autoconfigure\3.2.3\spring-boot-autoconfigure-3.2.3.jar;C:\Users\user\.m2\repository\org\springframework\boot\spring-boot-starter-logging\3.2.3\spring-boot-starter-logging-3.2.3.jar;C:\Users\user\.m2\repository\org\apache\logging\log4j\log4j-to-slf4j\2.21.1\log4j-to-slf4j-2.21.1.jar;C:\Users\user\.m2\repository\org\apache\logging\log4j\log4j-api\2.21.1\log4j-api-2.21.1.jar;C:\Users\user\.m2\repository\org\slf4j\jul-to-slf4j\2.0.12\jul-to-slf4j-2.0.12.jar;C:\Users\user\.m2\repository\jakarta\annotation\jakarta.annotation-api\2.1.1\jakarta.annotation-api-2.1.1.jar;C:\Users\user\.m2\repository\org\yaml\snakeyaml\2.2\snakeyaml-2.2.jar;C:\Users\user\.m2\repository\org\springframework\boot\spring-boot-starter-json\3.2.3\spring-boot-starter-json-3.2.3.jar;C:\Users\user\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jdk8\2.15.4\jackson-datatype-jdk8-2.15.4.jar;C:\Users\user\.m2\repository\com\fasterxml\jackson\module\jackson-module-parameter-names\2.15.4\jackson-module-parameter-names-2.15.4.jar;C:\Users\user\.m2\repository\org\springframework\boot\spring-boot-starter-reactor-netty\3.2.3\spring-boot-starter-reactor-netty-3.2.3.jar;C:\Users\user\.m2\repository\io\projectreactor\netty\reactor-netty-http\1.1.16\reactor-netty-http-1.1.16.jar;C:\Users\user\.m2\repository\io\netty\netty-codec-http\4.1.107.Final\netty-codec-http-4.1.107.Final.jar;C:\Users\user\.m2\repository\io\netty\netty-codec-http2\4.1.107.Final\netty-codec-http2-4.1.107.Final.jar;C:\Users\user\.m2\repository\io\netty\netty-resolver-dns\4.1.107.Final\netty-resolver-dns-4.1.107.Final.jar;C:\Users\user\.m2\repository\io\netty\netty-codec-dns\4.1.107.Final\netty-codec-dns-4.1.107.Final.jar;C:\Users\user\.m2\repository\io\netty\netty-resolver-dns-native-macos\4.1.107.Final\netty-resolver-dns-native-macos-4.1.107.Final-osx-x86_64.jar;C:\Users\user\.m2\repository\io\netty\netty-resolver-dns-classes-macos\4.1.107.Final\netty-resolver-dns-classes-macos-4.1.107.Final.jar;C:\Users\user\.m2\repository\io\netty\netty-transport-native-epoll\4.1.107.Final\netty-transport-native-epoll-4.1.107.Final-linux-x86_64.jar;C:\Users\user\.m2\repository\io\projectreactor\netty\reactor-netty-core\1.1.16\reactor-netty-core-1.1.16.jar;C:\Users\user\.m2\repository\io\netty\netty-handler-proxy\4.1.107.Final\netty-handler-proxy-4.1.107.Final.jar;C:\Users\user\.m2\repository\io\netty\netty-codec-socks\4.1.107.Final\netty-codec-socks-4.1.107.Final.jar;C:\Users\user\.m2\repository\org\springframework\spring-web\6.1.4\spring-web-6.1.4.jar;C:\Users\user\.m2\repository\org\springframework\spring-beans\6.1.4\spring-beans-6.1.4.jar;C:\Users\user\.m2\repository\org\springframework\spring-webflux\6.1.4\spring-webflux-6.1.4.jar;C:\Users\user\.m2\repository\org\springframework\boot\spring-boot-starter-data-mongodb-reactive\3.2.3\spring-boot-starter-data-mongodb-reactive-3.2.3.jar;C:\Users\user\.m2\repository\io\projectreactor\reactor-core\3.6.3\reactor-core-3.6.3.jar;C:\Users\user\.m2\repository\org\reactivestreams\reactive-streams\1.0.4\reactive-streams-1.0.4.jar;C:\Users\user\.m2\repository\org\mongodb\mongodb-driver-reactivestreams\4.11.1\mongodb-driver-reactivestreams-4.11.1.jar;C:\Users\user\.m2\repository\org\mongodb\bson\4.11.1\bson-4.11.1.jar;C:\Users\user\.m2\repository\org\mongodb\mongodb-driver-core\4.11.1\mongodb-driver-core-4.11.1.jar;C:\Users\user\.m2\repository\org\mongodb\bson-record-codec\4.11.1\bson-record-codec-4.11.1.jar;C:\Users\user\.m2\repository\org\springframework\data\spring-data-mongodb\4.2.3\spring-data-mongodb-4.2.3.jar;C:\Users\user\.m2\repository\org\springframework\spring-expression\6.1.4\spring-expression-6.1.4.jar;C:\Users\user\.m2\repository\org\springframework\data\spring-data-commons\3.2.3\spring-data-commons-3.2.3.jar;C:\Users\user\.m2\repository\org\slf4j\slf4j-api\2.0.12\slf4j-api-2.0.12.jar;C:\Users\user\.m2\repository\org\springframework\boot\spring-boot-starter-validation\3.2.3\spring-boot-starter-validation-3.2.3.jar;C:\Users\user\.m2\repository\org\apache\tomcat\embed\tomcat-embed-el\10.1.19\tomcat-embed-el-10.1.19.jar;C:\Users\user\.m2\repository\org\hibernate\validator\hibernate-validator\8.0.1.Final\hibernate-validator-8.0.1.Final.jar;C:\Users\user\.m2\repository\jakarta\validation\jakarta.validation-api\3.0.2\jakarta.validation-api-3.0.2.jar;C:\Users\user\.m2\repository\org\jboss\logging\jboss-logging\3.5.3.Final\jboss-logging-3.5.3.Final.jar;C:\Users\user\.m2\repository\com\fasterxml\classmate\1.6.0\classmate-1.6.0.jar;C:\Users\user\.m2\repository\org\springframework\kafka\spring-kafka\3.1.2\spring-kafka-3.1.2.jar;C:\Users\user\.m2\repository\org\springframework\spring-context\6.1.4\spring-context-6.1.4.jar;C:\Users\user\.m2\repository\org\springframework\spring-aop\6.1.4\spring-aop-6.1.4.jar;C:\Users\user\.m2\repository\org\springframework\spring-messaging\6.1.4\spring-messaging-6.1.4.jar;C:\Users\user\.m2\repository\org\springframework\spring-tx\6.1.4\spring-tx-6.1.4.jar;C:\Users\user\.m2\repository\org\springframework\retry\spring-retry\2.0.5\spring-retry-2.0.5.jar;C:\Users\user\.m2\repository\org\apache\kafka\kafka-clients\3.6.1\kafka-clients-3.6.1.jar;C:\Users\user\.m2\repository\com\github\luben\zstd-jni\1.5.5-1\zstd-jni-1.5.5-1.jar;C:\Users\user\.m2\repository\org\lz4\lz4-java\1.8.0\lz4-java-1.8.0.jar;C:\Users\user\.m2\repository\org\xerial\snappy\snappy-java\1.1.10.5\snappy-java-1.1.10.5.jar;C:\Users\user\.m2\repository\io\micrometer\micrometer-observation\1.12.3\micrometer-observation-1.12.3.jar;C:\Users\user\.m2\repository\io\micrometer\micrometer-commons\1.12.3\micrometer-commons-1.12.3.jar;C:\Users\user\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;C:\Users\user\.m2\repository\io\projectreactor\kafka\reactor-kafka\1.3.23\reactor-kafka-1.3.23.jar;C:\Users\user\.m2\repository\org\eclipse\paho\org.eclipse.paho.client.mqttv3\1.2.5\org.eclipse.paho.client.mqttv3-1.2.5.jar;C:\Users\user\.m2\repository\org\springframework\integration\spring-integration-mqtt\6.2.2\spring-integration-mqtt-6.2.2.jar;C:\Users\user\.m2\repository\org\springframework\integration\spring-integration-core\6.2.2\spring-integration-core-6.2.2.jar;C:\Users\user\.m2\repository\org\springdoc\springdoc-openapi-starter-webflux-ui\2.3.0\springdoc-openapi-starter-webflux-ui-2.3.0.jar;C:\Users\user\.m2\repository\org\springdoc\springdoc-openapi-starter-webflux-api\2.3.0\springdoc-openapi-starter-webflux-api-2.3.0.jar;C:\Users\user\.m2\repository\org\springdoc\springdoc-openapi-starter-common\2.3.0\springdoc-openapi-starter-common-2.3.0.jar;C:\Users\user\.m2\repository\io\swagger\core\v3\swagger-core-jakarta\2.2.19\swagger-core-jakarta-2.2.19.jar;C:\Users\user\.m2\repository\org\apache\commons\commons-lang3\3.13.0\commons-lang3-3.13.0.jar;C:\Users\user\.m2\repository\io\swagger\core\v3\swagger-annotations-jakarta\2.2.19\swagger-annotations-jakarta-2.2.19.jar;C:\Users\user\.m2\repository\io\swagger\core\v3\swagger-models-jakarta\2.2.19\swagger-models-jakarta-2.2.19.jar;C:\Users\user\.m2\repository\com\fasterxml\jackson\dataformat\jackson-dataformat-yaml\2.15.4\jackson-dataformat-yaml-2.15.4.jar;C:\Users\user\.m2\repository\org\webjars\swagger-ui\5.10.3\swagger-ui-5.10.3.jar;C:\Users\user\.m2\repository\org\projectlombok\lombok\1.18.30\lombok-1.18.30.jar;C:\Users\user\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.15.4\jackson-datatype-jsr310-2.15.4.jar;C:\Users\user\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.15.4\jackson-annotations-2.15.4.jar;C:\Users\user\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.15.4\jackson-core-2.15.4.jar;C:\Users\user\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.15.4\jackson-databind-2.15.4.jar;C:\Users\user\.m2\repository\org\springframework\boot\spring-boot-starter-test\3.2.3\spring-boot-starter-test-3.2.3.jar;C:\Users\user\.m2\repository\org\springframework\boot\spring-boot-test\3.2.3\spring-boot-test-3.2.3.jar;C:\Users\user\.m2\repository\org\springframework\boot\spring-boot-test-autoconfigure\3.2.3\spring-boot-test-autoconfigure-3.2.3.jar;C:\Users\user\.m2\repository\com\jayway\jsonpath\json-path\2.9.0\json-path-2.9.0.jar;C:\Users\user\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\4.0.1\jakarta.xml.bind-api-4.0.1.jar;C:\Users\user\.m2\repository\jakarta\activation\jakarta.activation-api\2.1.2\jakarta.activation-api-2.1.2.jar;C:\Users\user\.m2\repository\net\minidev\json-smart\2.5.0\json-smart-2.5.0.jar;C:\Users\user\.m2\repository\net\minidev\accessors-smart\2.5.0\accessors-smart-2.5.0.jar;C:\Users\user\.m2\repository\org\ow2\asm\asm\9.3\asm-9.3.jar;C:\Users\user\.m2\repository\org\assertj\assertj-core\3.24.2\assertj-core-3.24.2.jar;C:\Users\user\.m2\repository\net\bytebuddy\byte-buddy\1.14.12\byte-buddy-1.14.12.jar;C:\Users\user\.m2\repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;C:\Users\user\.m2\repository\org\junit\jupiter\junit-jupiter\5.10.2\junit-jupiter-5.10.2.jar;C:\Users\user\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.2\junit-jupiter-params-5.10.2.jar;C:\Users\user\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.2\junit-jupiter-engine-5.10.2.jar;C:\Users\user\.m2\repository\org\mockito\mockito-core\5.7.0\mockito-core-5.7.0.jar;C:\Users\user\.m2\repository\net\bytebuddy\byte-buddy-agent\1.14.12\byte-buddy-agent-1.14.12.jar;C:\Users\user\.m2\repository\org\objenesis\objenesis\3.3\objenesis-3.3.jar;C:\Users\user\.m2\repository\org\mockito\mockito-junit-jupiter\5.7.0\mockito-junit-jupiter-5.7.0.jar;C:\Users\user\.m2\repository\org\skyscreamer\jsonassert\1.5.1\jsonassert-1.5.1.jar;C:\Users\user\.m2\repository\com\vaadin\external\google\android-json\0.0.20131108.vaadin1\android-json-0.0.20131108.vaadin1.jar;C:\Users\user\.m2\repository\org\springframework\spring-core\6.1.4\spring-core-6.1.4.jar;C:\Users\user\.m2\repository\org\springframework\spring-jcl\6.1.4\spring-jcl-6.1.4.jar;C:\Users\user\.m2\repository\org\springframework\spring-test\6.1.4\spring-test-6.1.4.jar;C:\Users\user\.m2\repository\org\xmlunit\xmlunit-core\2.9.1\xmlunit-core-2.9.1.jar;C:\Users\user\.m2\repository\io\projectreactor\reactor-test\3.6.3\reactor-test-3.6.3.jar;C:\Users\user\.m2\repository\org\springframework\kafka\spring-kafka-test\3.1.2\spring-kafka-test-3.1.2.jar;C:\Users\user\.m2\repository\org\apache\zookeeper\zookeeper\3.8.3\zookeeper-3.8.3.jar;C:\Users\user\.m2\repository\org\apache\zookeeper\zookeeper-jute\3.8.3\zookeeper-jute-3.8.3.jar;C:\Users\user\.m2\repository\org\apache\yetus\audience-annotations\0.12.0\audience-annotations-0.12.0.jar;C:\Users\user\.m2\repository\io\netty\netty-handler\4.1.107.Final\netty-handler-4.1.107.Final.jar;C:\Users\user\.m2\repository\io\netty\netty-common\4.1.107.Final\netty-common-4.1.107.Final.jar;C:\Users\user\.m2\repository\io\netty\netty-resolver\4.1.107.Final\netty-resolver-4.1.107.Final.jar;C:\Users\user\.m2\repository\io\netty\netty-buffer\4.1.107.Final\netty-buffer-4.1.107.Final.jar;C:\Users\user\.m2\repository\io\netty\netty-transport\4.1.107.Final\netty-transport-4.1.107.Final.jar;C:\Users\user\.m2\repository\io\netty\netty-transport-native-unix-common\4.1.107.Final\netty-transport-native-unix-common-4.1.107.Final.jar;C:\Users\user\.m2\repository\io\netty\netty-codec\4.1.107.Final\netty-codec-4.1.107.Final.jar;C:\Users\user\.m2\repository\io\netty\netty-transport-native-epoll\4.1.107.Final\netty-transport-native-epoll-4.1.107.Final.jar;C:\Users\user\.m2\repository\io\netty\netty-transport-classes-epoll\4.1.107.Final\netty-transport-classes-epoll-4.1.107.Final.jar;C:\Users\user\.m2\repository\ch\qos\logback\logback-core\1.4.14\logback-core-1.4.14.jar;C:\Users\user\.m2\repository\ch\qos\logback\logback-classic\1.4.14\logback-classic-1.4.14.jar;C:\Users\user\.m2\repository\commons-io\commons-io\2.11.0\commons-io-2.11.0.jar;C:\Users\user\.m2\repository\org\apache\kafka\kafka-clients\3.6.1\kafka-clients-3.6.1-test.jar;C:\Users\user\.m2\repository\org\apache\kafka\kafka-metadata\3.6.1\kafka-metadata-3.6.1.jar;C:\Users\user\.m2\repository\org\apache\kafka\kafka-raft\3.6.1\kafka-raft-3.6.1.jar;C:\Users\user\.m2\repository\com\yammer\metrics\metrics-core\2.2.0\metrics-core-2.2.0.jar;C:\Users\user\.m2\repository\org\apache\kafka\kafka-server-common\3.6.1\kafka-server-common-3.6.1.jar;C:\Users\user\.m2\repository\net\sf\jopt-simple\jopt-simple\5.0.4\jopt-simple-5.0.4.jar;C:\Users\user\.m2\repository\org\pcollections\pcollections\4.0.1\pcollections-4.0.1.jar;C:\Users\user\.m2\repository\org\apache\kafka\kafka-server-common\3.6.1\kafka-server-common-3.6.1-test.jar;C:\Users\user\.m2\repository\org\apache\kafka\kafka-streams-test-utils\3.6.1\kafka-streams-test-utils-3.6.1.jar;C:\Users\user\.m2\repository\org\apache\kafka\kafka-streams\3.6.1\kafka-streams-3.6.1.jar;C:\Users\user\.m2\repository\org\rocksdb\rocksdbjni\7.9.2\rocksdbjni-7.9.2.jar;C:\Users\user\.m2\repository\org\apache\kafka\kafka_2.13\3.6.1\kafka_2.13-3.6.1.jar;C:\Users\user\.m2\repository\org\scala-lang\scala-library\2.13.11\scala-library-2.13.11.jar;C:\Users\user\.m2\repository\org\apache\kafka\kafka-group-coordinator\3.6.1\kafka-group-coordinator-3.6.1.jar;C:\Users\user\.m2\repository\org\apache\kafka\kafka-storage-api\3.6.1\kafka-storage-api-3.6.1.jar;C:\Users\user\.m2\repository\org\apache\kafka\kafka-tools-api\3.6.1\kafka-tools-api-3.6.1.jar;C:\Users\user\.m2\repository\org\apache\kafka\kafka-storage\3.6.1\kafka-storage-3.6.1.jar;C:\Users\user\.m2\repository\com\github\ben-manes\caffeine\caffeine\3.1.8\caffeine-3.1.8.jar;C:\Users\user\.m2\repository\org\checkerframework\checker-qual\3.37.0\checker-qual-3.37.0.jar;C:\Users\user\.m2\repository\com\google\errorprone\error_prone_annotations\2.21.1\error_prone_annotations-2.21.1.jar;C:\Users\user\.m2\repository\net\sourceforge\argparse4j\argparse4j\0.7.0\argparse4j-0.7.0.jar;C:\Users\user\.m2\repository\commons-validator\commons-validator\1.7\commons-validator-1.7.jar;C:\Users\user\.m2\repository\commons-beanutils\commons-beanutils\1.9.4\commons-beanutils-1.9.4.jar;C:\Users\user\.m2\repository\commons-digester\commons-digester\2.1\commons-digester-2.1.jar;C:\Users\user\.m2\repository\commons-collections\commons-collections\3.2.2\commons-collections-3.2.2.jar;C:\Users\user\.m2\repository\com\fasterxml\jackson\module\jackson-module-scala_2.13\2.15.4\jackson-module-scala_2.13-2.15.4.jar;C:\Users\user\.m2\repository\com\thoughtworks\paranamer\paranamer\2.8\paranamer-2.8.jar;C:\Users\user\.m2\repository\com\fasterxml\jackson\dataformat\jackson-dataformat-csv\2.15.4\jackson-dataformat-csv-2.15.4.jar;C:\Users\user\.m2\repository\org\bitbucket\b_c\jose4j\0.9.3\jose4j-0.9.3.jar;C:\Users\user\.m2\repository\org\scala-lang\modules\scala-collection-compat_2.13\2.10.0\scala-collection-compat_2.13-2.10.0.jar;C:\Users\user\.m2\repository\org\scala-lang\modules\scala-java8-compat_2.13\1.0.2\scala-java8-compat_2.13-1.0.2.jar;C:\Users\user\.m2\repository\org\scala-lang\scala-reflect\2.13.11\scala-reflect-2.13.11.jar;C:\Users\user\.m2\repository\com\typesafe\scala-logging\scala-logging_2.13\3.9.4\scala-logging_2.13-3.9.4.jar;C:\Users\user\.m2\repository\io\dropwizard\metrics\metrics-core\4.2.25\metrics-core-4.2.25.jar;C:\Users\user\.m2\repository\commons-cli\commons-cli\1.4\commons-cli-1.4.jar;C:\Users\user\.m2\repository\org\apache\kafka\kafka_2.13\3.6.1\kafka_2.13-3.6.1-test.jar;C:\Users\user\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.2\junit-jupiter-api-5.10.2.jar;C:\Users\user\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\user\.m2\repository\org\junit\platform\junit-platform-commons\1.10.2\junit-platform-commons-1.10.2.jar;C:\Users\user\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\user\.m2\repository\org\junit\platform\junit-platform-launcher\1.10.2\junit-platform-launcher-1.10.2.jar;C:\Users\user\.m2\repository\org\junit\platform\junit-platform-engine\1.10.2\junit-platform-engine-1.10.2.jar;C:\Users\user\.m2\repository\org\testcontainers\mongodb\1.19.5\mongodb-1.19.5.jar;C:\Users\user\.m2\repository\org\testcontainers\testcontainers\1.19.5\testcontainers-1.19.5.jar;C:\Users\user\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\user\.m2\repository\org\hamcrest\hamcrest-core\2.2\hamcrest-core-2.2.jar;C:\Users\user\.m2\repository\org\apache\commons\commons-compress\1.24.0\commons-compress-1.24.0.jar;C:\Users\user\.m2\repository\org\rnorth\duct-tape\duct-tape\1.0.8\duct-tape-1.0.8.jar;C:\Users\user\.m2\repository\com\github\docker-java\docker-java-api\3.3.4\docker-java-api-3.3.4.jar;C:\Users\user\.m2\repository\com\github\docker-java\docker-java-transport-zerodep\3.3.4\docker-java-transport-zerodep-3.3.4.jar;C:\Users\user\.m2\repository\com\github\docker-java\docker-java-transport\3.3.4\docker-java-transport-3.3.4.jar;C:\Users\user\.m2\repository\net\java\dev\jna\jna\5.13.0\jna-5.13.0.jar;C:\Users\user\.m2\repository\org\testcontainers\junit-jupiter\1.19.5\junit-jupiter-1.19.5.jar;C:\Users\user\.m2\repository\org\awaitility\awaitility\4.2.0\awaitility-4.2.0.jar;C:\Users\user\.m2\repository\org\testcontainers\hivemq\1.19.3\hivemq-1.19.3.jar;C:\Users\user\.m2\repository\org\jetbrains\annotations\24.0.1\annotations-24.0.1.jar;C:\Users\user\.m2\repository\org\testcontainers\kafka\1.19.5\kafka-1.19.5.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="user.timezone" value="Europe/Paris"/>
+    <property name="org.jboss.logging.provider" value="slf4j"/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="java.vm.specification.version" value="17"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="FR"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-17\bin"/>
+    <property name="sun.java.command" value="C:\Users\user\AppData\Local\Temp\surefire14768407255616603349\surefirebooter-20250207120832164_3.jar C:\Users\user\AppData\Local\Temp\surefire14768407255616603349 2025-02-07T12-08-31_541-jvmRun1 surefire-20250207120832164_1tmp surefire_0-20250207120832164_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="C:\Users\user\Documents\taoufik_project\reactive\reactive\target\test-classes;C:\Users\user\Documents\taoufik_project\reactive\reactive\target\classes;C:\Users\user\.m2\repository\org\springframework\boot\spring-boot-starter-webflux\3.2.3\spring-boot-starter-webflux-3.2.3.jar;C:\Users\user\.m2\repository\org\springframework\boot\spring-boot-starter\3.2.3\spring-boot-starter-3.2.3.jar;C:\Users\user\.m2\repository\org\springframework\boot\spring-boot\3.2.3\spring-boot-3.2.3.jar;C:\Users\user\.m2\repository\org\springframework\boot\spring-boot-autoconfigure\3.2.3\spring-boot-autoconfigure-3.2.3.jar;C:\Users\user\.m2\repository\org\springframework\boot\spring-boot-starter-logging\3.2.3\spring-boot-starter-logging-3.2.3.jar;C:\Users\user\.m2\repository\org\apache\logging\log4j\log4j-to-slf4j\2.21.1\log4j-to-slf4j-2.21.1.jar;C:\Users\user\.m2\repository\org\apache\logging\log4j\log4j-api\2.21.1\log4j-api-2.21.1.jar;C:\Users\user\.m2\repository\org\slf4j\jul-to-slf4j\2.0.12\jul-to-slf4j-2.0.12.jar;C:\Users\user\.m2\repository\jakarta\annotation\jakarta.annotation-api\2.1.1\jakarta.annotation-api-2.1.1.jar;C:\Users\user\.m2\repository\org\yaml\snakeyaml\2.2\snakeyaml-2.2.jar;C:\Users\user\.m2\repository\org\springframework\boot\spring-boot-starter-json\3.2.3\spring-boot-starter-json-3.2.3.jar;C:\Users\user\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jdk8\2.15.4\jackson-datatype-jdk8-2.15.4.jar;C:\Users\user\.m2\repository\com\fasterxml\jackson\module\jackson-module-parameter-names\2.15.4\jackson-module-parameter-names-2.15.4.jar;C:\Users\user\.m2\repository\org\springframework\boot\spring-boot-starter-reactor-netty\3.2.3\spring-boot-starter-reactor-netty-3.2.3.jar;C:\Users\user\.m2\repository\io\projectreactor\netty\reactor-netty-http\1.1.16\reactor-netty-http-1.1.16.jar;C:\Users\user\.m2\repository\io\netty\netty-codec-http\4.1.107.Final\netty-codec-http-4.1.107.Final.jar;C:\Users\user\.m2\repository\io\netty\netty-codec-http2\4.1.107.Final\netty-codec-http2-4.1.107.Final.jar;C:\Users\user\.m2\repository\io\netty\netty-resolver-dns\4.1.107.Final\netty-resolver-dns-4.1.107.Final.jar;C:\Users\user\.m2\repository\io\netty\netty-codec-dns\4.1.107.Final\netty-codec-dns-4.1.107.Final.jar;C:\Users\user\.m2\repository\io\netty\netty-resolver-dns-native-macos\4.1.107.Final\netty-resolver-dns-native-macos-4.1.107.Final-osx-x86_64.jar;C:\Users\user\.m2\repository\io\netty\netty-resolver-dns-classes-macos\4.1.107.Final\netty-resolver-dns-classes-macos-4.1.107.Final.jar;C:\Users\user\.m2\repository\io\netty\netty-transport-native-epoll\4.1.107.Final\netty-transport-native-epoll-4.1.107.Final-linux-x86_64.jar;C:\Users\user\.m2\repository\io\projectreactor\netty\reactor-netty-core\1.1.16\reactor-netty-core-1.1.16.jar;C:\Users\user\.m2\repository\io\netty\netty-handler-proxy\4.1.107.Final\netty-handler-proxy-4.1.107.Final.jar;C:\Users\user\.m2\repository\io\netty\netty-codec-socks\4.1.107.Final\netty-codec-socks-4.1.107.Final.jar;C:\Users\user\.m2\repository\org\springframework\spring-web\6.1.4\spring-web-6.1.4.jar;C:\Users\user\.m2\repository\org\springframework\spring-beans\6.1.4\spring-beans-6.1.4.jar;C:\Users\user\.m2\repository\org\springframework\spring-webflux\6.1.4\spring-webflux-6.1.4.jar;C:\Users\user\.m2\repository\org\springframework\boot\spring-boot-starter-data-mongodb-reactive\3.2.3\spring-boot-starter-data-mongodb-reactive-3.2.3.jar;C:\Users\user\.m2\repository\io\projectreactor\reactor-core\3.6.3\reactor-core-3.6.3.jar;C:\Users\user\.m2\repository\org\reactivestreams\reactive-streams\1.0.4\reactive-streams-1.0.4.jar;C:\Users\user\.m2\repository\org\mongodb\mongodb-driver-reactivestreams\4.11.1\mongodb-driver-reactivestreams-4.11.1.jar;C:\Users\user\.m2\repository\org\mongodb\bson\4.11.1\bson-4.11.1.jar;C:\Users\user\.m2\repository\org\mongodb\mongodb-driver-core\4.11.1\mongodb-driver-core-4.11.1.jar;C:\Users\user\.m2\repository\org\mongodb\bson-record-codec\4.11.1\bson-record-codec-4.11.1.jar;C:\Users\user\.m2\repository\org\springframework\data\spring-data-mongodb\4.2.3\spring-data-mongodb-4.2.3.jar;C:\Users\user\.m2\repository\org\springframework\spring-expression\6.1.4\spring-expression-6.1.4.jar;C:\Users\user\.m2\repository\org\springframework\data\spring-data-commons\3.2.3\spring-data-commons-3.2.3.jar;C:\Users\user\.m2\repository\org\slf4j\slf4j-api\2.0.12\slf4j-api-2.0.12.jar;C:\Users\user\.m2\repository\org\springframework\boot\spring-boot-starter-validation\3.2.3\spring-boot-starter-validation-3.2.3.jar;C:\Users\user\.m2\repository\org\apache\tomcat\embed\tomcat-embed-el\10.1.19\tomcat-embed-el-10.1.19.jar;C:\Users\user\.m2\repository\org\hibernate\validator\hibernate-validator\8.0.1.Final\hibernate-validator-8.0.1.Final.jar;C:\Users\user\.m2\repository\jakarta\validation\jakarta.validation-api\3.0.2\jakarta.validation-api-3.0.2.jar;C:\Users\user\.m2\repository\org\jboss\logging\jboss-logging\3.5.3.Final\jboss-logging-3.5.3.Final.jar;C:\Users\user\.m2\repository\com\fasterxml\classmate\1.6.0\classmate-1.6.0.jar;C:\Users\user\.m2\repository\org\springframework\kafka\spring-kafka\3.1.2\spring-kafka-3.1.2.jar;C:\Users\user\.m2\repository\org\springframework\spring-context\6.1.4\spring-context-6.1.4.jar;C:\Users\user\.m2\repository\org\springframework\spring-aop\6.1.4\spring-aop-6.1.4.jar;C:\Users\user\.m2\repository\org\springframework\spring-messaging\6.1.4\spring-messaging-6.1.4.jar;C:\Users\user\.m2\repository\org\springframework\spring-tx\6.1.4\spring-tx-6.1.4.jar;C:\Users\user\.m2\repository\org\springframework\retry\spring-retry\2.0.5\spring-retry-2.0.5.jar;C:\Users\user\.m2\repository\org\apache\kafka\kafka-clients\3.6.1\kafka-clients-3.6.1.jar;C:\Users\user\.m2\repository\com\github\luben\zstd-jni\1.5.5-1\zstd-jni-1.5.5-1.jar;C:\Users\user\.m2\repository\org\lz4\lz4-java\1.8.0\lz4-java-1.8.0.jar;C:\Users\user\.m2\repository\org\xerial\snappy\snappy-java\1.1.10.5\snappy-java-1.1.10.5.jar;C:\Users\user\.m2\repository\io\micrometer\micrometer-observation\1.12.3\micrometer-observation-1.12.3.jar;C:\Users\user\.m2\repository\io\micrometer\micrometer-commons\1.12.3\micrometer-commons-1.12.3.jar;C:\Users\user\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;C:\Users\user\.m2\repository\io\projectreactor\kafka\reactor-kafka\1.3.23\reactor-kafka-1.3.23.jar;C:\Users\user\.m2\repository\org\eclipse\paho\org.eclipse.paho.client.mqttv3\1.2.5\org.eclipse.paho.client.mqttv3-1.2.5.jar;C:\Users\user\.m2\repository\org\springframework\integration\spring-integration-mqtt\6.2.2\spring-integration-mqtt-6.2.2.jar;C:\Users\user\.m2\repository\org\springframework\integration\spring-integration-core\6.2.2\spring-integration-core-6.2.2.jar;C:\Users\user\.m2\repository\org\springdoc\springdoc-openapi-starter-webflux-ui\2.3.0\springdoc-openapi-starter-webflux-ui-2.3.0.jar;C:\Users\user\.m2\repository\org\springdoc\springdoc-openapi-starter-webflux-api\2.3.0\springdoc-openapi-starter-webflux-api-2.3.0.jar;C:\Users\user\.m2\repository\org\springdoc\springdoc-openapi-starter-common\2.3.0\springdoc-openapi-starter-common-2.3.0.jar;C:\Users\user\.m2\repository\io\swagger\core\v3\swagger-core-jakarta\2.2.19\swagger-core-jakarta-2.2.19.jar;C:\Users\user\.m2\repository\org\apache\commons\commons-lang3\3.13.0\commons-lang3-3.13.0.jar;C:\Users\user\.m2\repository\io\swagger\core\v3\swagger-annotations-jakarta\2.2.19\swagger-annotations-jakarta-2.2.19.jar;C:\Users\user\.m2\repository\io\swagger\core\v3\swagger-models-jakarta\2.2.19\swagger-models-jakarta-2.2.19.jar;C:\Users\user\.m2\repository\com\fasterxml\jackson\dataformat\jackson-dataformat-yaml\2.15.4\jackson-dataformat-yaml-2.15.4.jar;C:\Users\user\.m2\repository\org\webjars\swagger-ui\5.10.3\swagger-ui-5.10.3.jar;C:\Users\user\.m2\repository\org\projectlombok\lombok\1.18.30\lombok-1.18.30.jar;C:\Users\user\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.15.4\jackson-datatype-jsr310-2.15.4.jar;C:\Users\user\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.15.4\jackson-annotations-2.15.4.jar;C:\Users\user\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.15.4\jackson-core-2.15.4.jar;C:\Users\user\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.15.4\jackson-databind-2.15.4.jar;C:\Users\user\.m2\repository\org\springframework\boot\spring-boot-starter-test\3.2.3\spring-boot-starter-test-3.2.3.jar;C:\Users\user\.m2\repository\org\springframework\boot\spring-boot-test\3.2.3\spring-boot-test-3.2.3.jar;C:\Users\user\.m2\repository\org\springframework\boot\spring-boot-test-autoconfigure\3.2.3\spring-boot-test-autoconfigure-3.2.3.jar;C:\Users\user\.m2\repository\com\jayway\jsonpath\json-path\2.9.0\json-path-2.9.0.jar;C:\Users\user\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\4.0.1\jakarta.xml.bind-api-4.0.1.jar;C:\Users\user\.m2\repository\jakarta\activation\jakarta.activation-api\2.1.2\jakarta.activation-api-2.1.2.jar;C:\Users\user\.m2\repository\net\minidev\json-smart\2.5.0\json-smart-2.5.0.jar;C:\Users\user\.m2\repository\net\minidev\accessors-smart\2.5.0\accessors-smart-2.5.0.jar;C:\Users\user\.m2\repository\org\ow2\asm\asm\9.3\asm-9.3.jar;C:\Users\user\.m2\repository\org\assertj\assertj-core\3.24.2\assertj-core-3.24.2.jar;C:\Users\user\.m2\repository\net\bytebuddy\byte-buddy\1.14.12\byte-buddy-1.14.12.jar;C:\Users\user\.m2\repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;C:\Users\user\.m2\repository\org\junit\jupiter\junit-jupiter\5.10.2\junit-jupiter-5.10.2.jar;C:\Users\user\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.2\junit-jupiter-params-5.10.2.jar;C:\Users\user\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.2\junit-jupiter-engine-5.10.2.jar;C:\Users\user\.m2\repository\org\mockito\mockito-core\5.7.0\mockito-core-5.7.0.jar;C:\Users\user\.m2\repository\net\bytebuddy\byte-buddy-agent\1.14.12\byte-buddy-agent-1.14.12.jar;C:\Users\user\.m2\repository\org\objenesis\objenesis\3.3\objenesis-3.3.jar;C:\Users\user\.m2\repository\org\mockito\mockito-junit-jupiter\5.7.0\mockito-junit-jupiter-5.7.0.jar;C:\Users\user\.m2\repository\org\skyscreamer\jsonassert\1.5.1\jsonassert-1.5.1.jar;C:\Users\user\.m2\repository\com\vaadin\external\google\android-json\0.0.20131108.vaadin1\android-json-0.0.20131108.vaadin1.jar;C:\Users\user\.m2\repository\org\springframework\spring-core\6.1.4\spring-core-6.1.4.jar;C:\Users\user\.m2\repository\org\springframework\spring-jcl\6.1.4\spring-jcl-6.1.4.jar;C:\Users\user\.m2\repository\org\springframework\spring-test\6.1.4\spring-test-6.1.4.jar;C:\Users\user\.m2\repository\org\xmlunit\xmlunit-core\2.9.1\xmlunit-core-2.9.1.jar;C:\Users\user\.m2\repository\io\projectreactor\reactor-test\3.6.3\reactor-test-3.6.3.jar;C:\Users\user\.m2\repository\org\springframework\kafka\spring-kafka-test\3.1.2\spring-kafka-test-3.1.2.jar;C:\Users\user\.m2\repository\org\apache\zookeeper\zookeeper\3.8.3\zookeeper-3.8.3.jar;C:\Users\user\.m2\repository\org\apache\zookeeper\zookeeper-jute\3.8.3\zookeeper-jute-3.8.3.jar;C:\Users\user\.m2\repository\org\apache\yetus\audience-annotations\0.12.0\audience-annotations-0.12.0.jar;C:\Users\user\.m2\repository\io\netty\netty-handler\4.1.107.Final\netty-handler-4.1.107.Final.jar;C:\Users\user\.m2\repository\io\netty\netty-common\4.1.107.Final\netty-common-4.1.107.Final.jar;C:\Users\user\.m2\repository\io\netty\netty-resolver\4.1.107.Final\netty-resolver-4.1.107.Final.jar;C:\Users\user\.m2\repository\io\netty\netty-buffer\4.1.107.Final\netty-buffer-4.1.107.Final.jar;C:\Users\user\.m2\repository\io\netty\netty-transport\4.1.107.Final\netty-transport-4.1.107.Final.jar;C:\Users\user\.m2\repository\io\netty\netty-transport-native-unix-common\4.1.107.Final\netty-transport-native-unix-common-4.1.107.Final.jar;C:\Users\user\.m2\repository\io\netty\netty-codec\4.1.107.Final\netty-codec-4.1.107.Final.jar;C:\Users\user\.m2\repository\io\netty\netty-transport-native-epoll\4.1.107.Final\netty-transport-native-epoll-4.1.107.Final.jar;C:\Users\user\.m2\repository\io\netty\netty-transport-classes-epoll\4.1.107.Final\netty-transport-classes-epoll-4.1.107.Final.jar;C:\Users\user\.m2\repository\ch\qos\logback\logback-core\1.4.14\logback-core-1.4.14.jar;C:\Users\user\.m2\repository\ch\qos\logback\logback-classic\1.4.14\logback-classic-1.4.14.jar;C:\Users\user\.m2\repository\commons-io\commons-io\2.11.0\commons-io-2.11.0.jar;C:\Users\user\.m2\repository\org\apache\kafka\kafka-clients\3.6.1\kafka-clients-3.6.1-test.jar;C:\Users\user\.m2\repository\org\apache\kafka\kafka-metadata\3.6.1\kafka-metadata-3.6.1.jar;C:\Users\user\.m2\repository\org\apache\kafka\kafka-raft\3.6.1\kafka-raft-3.6.1.jar;C:\Users\user\.m2\repository\com\yammer\metrics\metrics-core\2.2.0\metrics-core-2.2.0.jar;C:\Users\user\.m2\repository\org\apache\kafka\kafka-server-common\3.6.1\kafka-server-common-3.6.1.jar;C:\Users\user\.m2\repository\net\sf\jopt-simple\jopt-simple\5.0.4\jopt-simple-5.0.4.jar;C:\Users\user\.m2\repository\org\pcollections\pcollections\4.0.1\pcollections-4.0.1.jar;C:\Users\user\.m2\repository\org\apache\kafka\kafka-server-common\3.6.1\kafka-server-common-3.6.1-test.jar;C:\Users\user\.m2\repository\org\apache\kafka\kafka-streams-test-utils\3.6.1\kafka-streams-test-utils-3.6.1.jar;C:\Users\user\.m2\repository\org\apache\kafka\kafka-streams\3.6.1\kafka-streams-3.6.1.jar;C:\Users\user\.m2\repository\org\rocksdb\rocksdbjni\7.9.2\rocksdbjni-7.9.2.jar;C:\Users\user\.m2\repository\org\apache\kafka\kafka_2.13\3.6.1\kafka_2.13-3.6.1.jar;C:\Users\user\.m2\repository\org\scala-lang\scala-library\2.13.11\scala-library-2.13.11.jar;C:\Users\user\.m2\repository\org\apache\kafka\kafka-group-coordinator\3.6.1\kafka-group-coordinator-3.6.1.jar;C:\Users\user\.m2\repository\org\apache\kafka\kafka-storage-api\3.6.1\kafka-storage-api-3.6.1.jar;C:\Users\user\.m2\repository\org\apache\kafka\kafka-tools-api\3.6.1\kafka-tools-api-3.6.1.jar;C:\Users\user\.m2\repository\org\apache\kafka\kafka-storage\3.6.1\kafka-storage-3.6.1.jar;C:\Users\user\.m2\repository\com\github\ben-manes\caffeine\caffeine\3.1.8\caffeine-3.1.8.jar;C:\Users\user\.m2\repository\org\checkerframework\checker-qual\3.37.0\checker-qual-3.37.0.jar;C:\Users\user\.m2\repository\com\google\errorprone\error_prone_annotations\2.21.1\error_prone_annotations-2.21.1.jar;C:\Users\user\.m2\repository\net\sourceforge\argparse4j\argparse4j\0.7.0\argparse4j-0.7.0.jar;C:\Users\user\.m2\repository\commons-validator\commons-validator\1.7\commons-validator-1.7.jar;C:\Users\user\.m2\repository\commons-beanutils\commons-beanutils\1.9.4\commons-beanutils-1.9.4.jar;C:\Users\user\.m2\repository\commons-digester\commons-digester\2.1\commons-digester-2.1.jar;C:\Users\user\.m2\repository\commons-collections\commons-collections\3.2.2\commons-collections-3.2.2.jar;C:\Users\user\.m2\repository\com\fasterxml\jackson\module\jackson-module-scala_2.13\2.15.4\jackson-module-scala_2.13-2.15.4.jar;C:\Users\user\.m2\repository\com\thoughtworks\paranamer\paranamer\2.8\paranamer-2.8.jar;C:\Users\user\.m2\repository\com\fasterxml\jackson\dataformat\jackson-dataformat-csv\2.15.4\jackson-dataformat-csv-2.15.4.jar;C:\Users\user\.m2\repository\org\bitbucket\b_c\jose4j\0.9.3\jose4j-0.9.3.jar;C:\Users\user\.m2\repository\org\scala-lang\modules\scala-collection-compat_2.13\2.10.0\scala-collection-compat_2.13-2.10.0.jar;C:\Users\user\.m2\repository\org\scala-lang\modules\scala-java8-compat_2.13\1.0.2\scala-java8-compat_2.13-1.0.2.jar;C:\Users\user\.m2\repository\org\scala-lang\scala-reflect\2.13.11\scala-reflect-2.13.11.jar;C:\Users\user\.m2\repository\com\typesafe\scala-logging\scala-logging_2.13\3.9.4\scala-logging_2.13-3.9.4.jar;C:\Users\user\.m2\repository\io\dropwizard\metrics\metrics-core\4.2.25\metrics-core-4.2.25.jar;C:\Users\user\.m2\repository\commons-cli\commons-cli\1.4\commons-cli-1.4.jar;C:\Users\user\.m2\repository\org\apache\kafka\kafka_2.13\3.6.1\kafka_2.13-3.6.1-test.jar;C:\Users\user\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.2\junit-jupiter-api-5.10.2.jar;C:\Users\user\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\user\.m2\repository\org\junit\platform\junit-platform-commons\1.10.2\junit-platform-commons-1.10.2.jar;C:\Users\user\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\user\.m2\repository\org\junit\platform\junit-platform-launcher\1.10.2\junit-platform-launcher-1.10.2.jar;C:\Users\user\.m2\repository\org\junit\platform\junit-platform-engine\1.10.2\junit-platform-engine-1.10.2.jar;C:\Users\user\.m2\repository\org\testcontainers\mongodb\1.19.5\mongodb-1.19.5.jar;C:\Users\user\.m2\repository\org\testcontainers\testcontainers\1.19.5\testcontainers-1.19.5.jar;C:\Users\user\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\user\.m2\repository\org\hamcrest\hamcrest-core\2.2\hamcrest-core-2.2.jar;C:\Users\user\.m2\repository\org\apache\commons\commons-compress\1.24.0\commons-compress-1.24.0.jar;C:\Users\user\.m2\repository\org\rnorth\duct-tape\duct-tape\1.0.8\duct-tape-1.0.8.jar;C:\Users\user\.m2\repository\com\github\docker-java\docker-java-api\3.3.4\docker-java-api-3.3.4.jar;C:\Users\user\.m2\repository\com\github\docker-java\docker-java-transport-zerodep\3.3.4\docker-java-transport-zerodep-3.3.4.jar;C:\Users\user\.m2\repository\com\github\docker-java\docker-java-transport\3.3.4\docker-java-transport-3.3.4.jar;C:\Users\user\.m2\repository\net\java\dev\jna\jna\5.13.0\jna-5.13.0.jar;C:\Users\user\.m2\repository\org\testcontainers\junit-jupiter\1.19.5\junit-jupiter-1.19.5.jar;C:\Users\user\.m2\repository\org\awaitility\awaitility\4.2.0\awaitility-4.2.0.jar;C:\Users\user\.m2\repository\org\testcontainers\hivemq\1.19.3\hivemq-1.19.3.jar;C:\Users\user\.m2\repository\org\jetbrains\annotations\24.0.1\annotations-24.0.1.jar;C:\Users\user\.m2\repository\org\testcontainers\kafka\1.19.5\kafka-1.19.5.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\user"/>
+    <property name="user.language" value="fr"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2024-07-16"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk-17"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="C:\Users\user\Documents\taoufik_project\reactive\reactive"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="FILE_LOG_CHARSET" value="windows-1252"/>
+    <property name="java.awt.headless" value="true"/>
+    <property name="surefire.real.class.path" value="C:\Users\user\AppData\Local\Temp\surefire14768407255616603349\surefirebooter-20250207120832164_3.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="17.0.12+8-LTS-286"/>
+    <property name="user.name" value="user"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="C:\Users\user\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\user\AppData\Local\Temp\"/>
+    <property name="idea.version" value="2024.3.1.1"/>
+    <property name="java.version" value="17.0.12"/>
+    <property name="user.dir" value="C:\Users\user\Documents\taoufik_project\reactive\reactive"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="PID" value="11480"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="CONSOLE_LOG_CHARSET" value="windows-1252"/>
+    <property name="native.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-17\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;c:\Users\user\AppData\Local\Programs\cursor\resources\app\bin;C:\Program Files\Microsoft SDKs\Azure\CLI2\wbin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\Docker\Docker\resources\bin;C:\Users\user\Documents\taoufik_project\apache-maven-3.9.9\bin;C:\Program Files\nodejs\;C:\Users\user\AppData\Local\Programs\Python\Launcher\;C:\Users\user\AppData\Local\Microsoft\WindowsApps;C:\Users\user\AppData\Roaming\npm;c:\Users\user\AppData\Local\Programs\cursor\resources\app\bin;C:\Program Files\Java\jdk-17\bin;%HADOOP_HOME%\bin;C:\hadoop\bin;C:\Users\user\AppData\Local\Programs\Python\Launcher\;C:\Users\user\AppData\Local\Microsoft\WindowsApps;C:\Users\user\AppData\Roaming\npm;C:\Program Files\Java\jdk-17\bin;C:\hadoop\bin;C:\hadoop\bin;;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="17.0.12+8-LTS-286"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="61.0"/>
+  </properties>
+  <testcase name="shouldGetClientContracts" classname="com.example.controller.InsuranceContractControllerTest" time="0.267">
+    <failure message="Status expected:&lt;200 OK&gt; but was:&lt;500 INTERNAL_SERVER_ERROR&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: Status expected:<200 OK> but was:<500 INTERNAL_SERVER_ERROR>
+	at org.springframework.test.util.AssertionErrors.fail(AssertionErrors.java:59)
+	at org.springframework.test.util.AssertionErrors.assertEquals(AssertionErrors.java:122)
+	at org.springframework.test.web.reactive.server.StatusAssertions.lambda$assertStatusAndReturn$4(StatusAssertions.java:236)
+	at org.springframework.test.web.reactive.server.ExchangeResult.assertWithDiagnostics(ExchangeResult.java:222)
+	at org.springframework.test.web.reactive.server.StatusAssertions.assertStatusAndReturn(StatusAssertions.java:236)
+	at org.springframework.test.web.reactive.server.StatusAssertions.isOk(StatusAssertions.java:68)
+	at com.example.controller.InsuranceContractControllerTest.shouldGetClientContracts(InsuranceContractControllerTest.java:64)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+]]></failure>
+    <system-out><![CDATA[2025-02-07T12:08:48.272+01:00  INFO 11480 --- [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.controller.InsuranceContractControllerTest]: InsuranceContractControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-02-07T12:08:48.352+01:00  INFO 11480 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.ReactiveApplication for test class com.example.controller.InsuranceContractControllerTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.3)
+
+2025-02-07T12:08:48.518+01:00  INFO 11480 --- [           main] c.e.c.InsuranceContractControllerTest    : Starting InsuranceContractControllerTest using Java 17.0.12 with PID 11480 (started by user in C:\Users\user\Documents\taoufik_project\reactive\reactive)
+2025-02-07T12:08:48.519+01:00  INFO 11480 --- [           main] c.e.c.InsuranceContractControllerTest    : No active profile set, falling back to 1 default profile: "default"
+2025-02-07T12:08:49.360+01:00  INFO 11480 --- [           main] c.e.c.InsuranceContractControllerTest    : Started InsuranceContractControllerTest in 0.994 seconds (process running for 16.824)
+2025-02-07T12:08:49.524+01:00 ERROR 11480 --- [     parallel-3] a.w.r.e.AbstractErrorWebExceptionHandler : [1139cd6c]  500 Server Error for HTTP GET "/api/insurance/contracts/client/CLIENT-001"
+
+org.springframework.core.codec.CodecException: Type definition error: [simple type, class java.time.Instant]
+	at org.springframework.http.codec.json.AbstractJackson2Encoder.encodeStreamingValue(AbstractJackson2Encoder.java:289) ~[spring-web-6.1.4.jar:6.1.4]
+	Suppressed: reactor.core.publisher.FluxOnAssembly$OnAssemblyException: 
+Error has been observed at the following site(s):
+	*__checkpoint ? Handler com.example.controller.InsuranceContractController#getClientContracts(String) [DispatcherHandler]
+	*__checkpoint ? HTTP GET "/api/insurance/contracts/client/CLIENT-001" [ExceptionHandlingWebHandler]
+Original Stack Trace:
+		at org.springframework.http.codec.json.AbstractJackson2Encoder.encodeStreamingValue(AbstractJackson2Encoder.java:289) ~[spring-web-6.1.4.jar:6.1.4]
+		at org.springframework.http.codec.json.AbstractJackson2Encoder.lambda$encode$2(AbstractJackson2Encoder.java:192) ~[spring-web-6.1.4.jar:6.1.4]
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:113) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.Operators$ScalarSubscription.request(Operators.java:2571) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.request(FluxMapFuseable.java:171) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.set(Operators.java:2367) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.onSubscribe(Operators.java:2241) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onSubscribe(FluxMapFuseable.java:96) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.FluxJust.subscribe(FluxJust.java:68) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.Flux.subscribe(Flux.java:8836) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.FluxConcatArray$ConcatArraySubscriber.onComplete(FluxConcatArray.java:260) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.FluxConcatArray.subscribe(FluxConcatArray.java:79) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.InternalFluxOperator.subscribe(InternalFluxOperator.java:68) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.FluxDeferContextual.subscribe(FluxDeferContextual.java:57) ~[reactor-core-3.6.3.jar:3.6.3]
+		at org.springframework.http.server.reactive.ChannelSendOperator.subscribe(ChannelSendOperator.java:77) ~[spring-web-6.1.4.jar:6.1.4]
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:76) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:165) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onNext(FluxOnErrorResume.java:79) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onNext(FluxOnErrorResume.java:79) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.FluxPeek$PeekSubscriber.onNext(FluxPeek.java:200) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.complete(MonoIgnoreThen.java:294) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.onNext(MonoIgnoreThen.java:188) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:158) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.MonoZip$ZipCoordinator.signal(MonoZip.java:297) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.MonoZip$ZipInner.onNext(MonoZip.java:478) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.MonoPeekTerminal$MonoTerminalPeekSubscriber.onNext(MonoPeekTerminal.java:180) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.FluxDefaultIfEmpty$DefaultIfEmptySubscriber.onNext(FluxDefaultIfEmpty.java:122) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onNext(FluxSwitchIfEmpty.java:74) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.Operators$ScalarSubscription.request(Operators.java:2571) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.set(Operators.java:2367) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.onSubscribe(Operators.java:2241) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.FluxFlatMap.trySubscribeScalarMap(FluxFlatMap.java:193) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.MonoFlatMap.subscribeOrReturn(MonoFlatMap.java:53) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:63) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.MonoZip$ZipCoordinator.request(MonoZip.java:220) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.request(MonoFlatMap.java:194) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.onSubscribe(MonoIgnoreThen.java:135) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onSubscribe(MonoFlatMap.java:117) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.MonoZip.subscribe(MonoZip.java:129) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:76) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:53) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.subscribeNext(MonoIgnoreThen.java:241) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.onComplete(MonoIgnoreThen.java:204) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onComplete(MonoFlatMap.java:189) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.Operators.complete(Operators.java:137) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.MonoZip.subscribe(MonoZip.java:121) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4563) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.subscribeNext(MonoIgnoreThen.java:265) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.MonoIgnoreThen.subscribe(MonoIgnoreThen.java:51) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:76) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:165) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onNext(FluxOnErrorResume.java:79) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onNext(FluxSwitchIfEmpty.java:74) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.MonoNext$NextSubscriber.onNext(MonoNext.java:82) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.FluxConcatMapNoPrefetch$FluxConcatMapNoPrefetchSubscriber.innerNext(FluxConcatMapNoPrefetch.java:259) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.FluxConcatMap$ConcatMapInner.onNext(FluxConcatMap.java:865) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:129) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.MonoPeekTerminal$MonoTerminalPeekSubscriber.onNext(MonoPeekTerminal.java:180) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.Operators$ScalarSubscription.request(Operators.java:2571) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.MonoPeekTerminal$MonoTerminalPeekSubscriber.request(MonoPeekTerminal.java:139) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.request(FluxMapFuseable.java:171) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.request(Operators.java:2331) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.FluxConcatMapNoPrefetch$FluxConcatMapNoPrefetchSubscriber.request(FluxConcatMapNoPrefetch.java:339) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.MonoNext$NextSubscriber.request(MonoNext.java:108) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.set(Operators.java:2367) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.onSubscribe(Operators.java:2241) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.MonoNext$NextSubscriber.onSubscribe(MonoNext.java:70) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.FluxConcatMapNoPrefetch$FluxConcatMapNoPrefetchSubscriber.onSubscribe(FluxConcatMapNoPrefetch.java:164) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:201) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:83) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:76) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:53) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4563) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.subscribeNext(MonoIgnoreThen.java:265) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.MonoIgnoreThen.subscribe(MonoIgnoreThen.java:51) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4563) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.Mono.subscribeWith(Mono.java:4629) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4529) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4465) ~[reactor-core-3.6.3.jar:3.6.3]
+		at org.springframework.test.web.reactive.server.HttpHandlerConnector.lambda$doConnect$2(HttpHandlerConnector.java:100) ~[spring-test-6.1.4.jar:6.1.4]
+		at org.springframework.mock.http.client.reactive.MockClientHttpRequest.lambda$writeWith$2(MockClientHttpRequest.java:124) ~[spring-test-6.1.4.jar:6.1.4]
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:45) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4563) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.FluxConcatIterable$ConcatIterableSubscriber.onComplete(FluxConcatIterable.java:148) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.FluxConcatIterable.subscribe(FluxConcatIterable.java:60) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4563) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.Mono.subscribeWith(Mono.java:4629) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4529) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4465) ~[reactor-core-3.6.3.jar:3.6.3]
+		at org.springframework.test.web.reactive.server.HttpHandlerConnector.doConnect(HttpHandlerConnector.java:114) ~[spring-test-6.1.4.jar:6.1.4]
+		at org.springframework.test.web.reactive.server.HttpHandlerConnector.lambda$connect$0(HttpHandlerConnector.java:81) ~[spring-test-6.1.4.jar:6.1.4]
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:45) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4563) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.MonoSubscribeOn$SubscribeOnSubscriber.run(MonoSubscribeOn.java:126) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.scheduler.WorkerTask.call(WorkerTask.java:84) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.scheduler.WorkerTask.call(WorkerTask.java:37) ~[reactor-core-3.6.3.jar:3.6.3]
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+		at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+		at java.base/java.lang.Thread.run(Thread.java:842) ~[na:na]
+Caused by: com.fasterxml.jackson.databind.exc.InvalidDefinitionException: Java 8 date/time type `java.time.Instant` not supported by default: add Module "com.fasterxml.jackson.datatype:jackson-datatype-jsr310" to enable handling (through reference chain: com.example.model.InsuranceContract["startDate"])
+	at com.fasterxml.jackson.databind.exc.InvalidDefinitionException.from(InvalidDefinitionException.java:77) ~[jackson-databind-2.15.4.jar:2.15.4]
+	at com.fasterxml.jackson.databind.SerializerProvider.reportBadDefinition(SerializerProvider.java:1308) ~[jackson-databind-2.15.4.jar:2.15.4]
+	at com.fasterxml.jackson.databind.ser.impl.UnsupportedTypeSerializer.serialize(UnsupportedTypeSerializer.java:35) ~[jackson-databind-2.15.4.jar:2.15.4]
+	at com.fasterxml.jackson.databind.ser.BeanPropertyWriter.serializeAsField(BeanPropertyWriter.java:732) ~[jackson-databind-2.15.4.jar:2.15.4]
+	at com.fasterxml.jackson.databind.ser.std.BeanSerializerBase.serializeFields(BeanSerializerBase.java:772) ~[jackson-databind-2.15.4.jar:2.15.4]
+	at com.fasterxml.jackson.databind.ser.BeanSerializer.serialize(BeanSerializer.java:178) ~[jackson-databind-2.15.4.jar:2.15.4]
+	at com.fasterxml.jackson.databind.ser.DefaultSerializerProvider._serialize(DefaultSerializerProvider.java:479) ~[jackson-databind-2.15.4.jar:2.15.4]
+	at com.fasterxml.jackson.databind.ser.DefaultSerializerProvider.serializeValue(DefaultSerializerProvider.java:399) ~[jackson-databind-2.15.4.jar:2.15.4]
+	at com.fasterxml.jackson.databind.SequenceWriter.write(SequenceWriter.java:153) ~[jackson-databind-2.15.4.jar:2.15.4]
+	at org.springframework.http.codec.json.AbstractJackson2Encoder.encodeStreamingValue(AbstractJackson2Encoder.java:285) ~[spring-web-6.1.4.jar:6.1.4]
+	at org.springframework.http.codec.json.AbstractJackson2Encoder.lambda$encode$2(AbstractJackson2Encoder.java:192) ~[spring-web-6.1.4.jar:6.1.4]
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:113) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.Operators$ScalarSubscription.request(Operators.java:2571) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.request(FluxMapFuseable.java:171) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.set(Operators.java:2367) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.onSubscribe(Operators.java:2241) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onSubscribe(FluxMapFuseable.java:96) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.FluxJust.subscribe(FluxJust.java:68) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.Flux.subscribe(Flux.java:8836) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.FluxConcatArray$ConcatArraySubscriber.onComplete(FluxConcatArray.java:260) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.FluxConcatArray.subscribe(FluxConcatArray.java:79) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.InternalFluxOperator.subscribe(InternalFluxOperator.java:68) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.FluxDeferContextual.subscribe(FluxDeferContextual.java:57) ~[reactor-core-3.6.3.jar:3.6.3]
+	at org.springframework.http.server.reactive.ChannelSendOperator.subscribe(ChannelSendOperator.java:77) ~[spring-web-6.1.4.jar:6.1.4]
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:76) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:165) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onNext(FluxOnErrorResume.java:79) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onNext(FluxOnErrorResume.java:79) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.FluxPeek$PeekSubscriber.onNext(FluxPeek.java:200) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.complete(MonoIgnoreThen.java:294) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.onNext(MonoIgnoreThen.java:188) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:158) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.MonoZip$ZipCoordinator.signal(MonoZip.java:297) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.MonoZip$ZipInner.onNext(MonoZip.java:478) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.MonoPeekTerminal$MonoTerminalPeekSubscriber.onNext(MonoPeekTerminal.java:180) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.FluxDefaultIfEmpty$DefaultIfEmptySubscriber.onNext(FluxDefaultIfEmpty.java:122) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onNext(FluxSwitchIfEmpty.java:74) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.Operators$ScalarSubscription.request(Operators.java:2571) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.set(Operators.java:2367) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.onSubscribe(Operators.java:2241) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.FluxFlatMap.trySubscribeScalarMap(FluxFlatMap.java:193) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.MonoFlatMap.subscribeOrReturn(MonoFlatMap.java:53) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:63) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.MonoZip$ZipCoordinator.request(MonoZip.java:220) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.MonoFlatMap$FlatMapMain.request(MonoFlatMap.java:194) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.onSubscribe(MonoIgnoreThen.java:135) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.MonoFlatMap$FlatMapMain.onSubscribe(MonoFlatMap.java:117) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.MonoZip.subscribe(MonoZip.java:129) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:76) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:53) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.subscribeNext(MonoIgnoreThen.java:241) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.onComplete(MonoIgnoreThen.java:204) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.MonoFlatMap$FlatMapMain.onComplete(MonoFlatMap.java:189) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.Operators.complete(Operators.java:137) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.MonoZip.subscribe(MonoZip.java:121) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4563) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.subscribeNext(MonoIgnoreThen.java:265) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.MonoIgnoreThen.subscribe(MonoIgnoreThen.java:51) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:76) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:165) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onNext(FluxOnErrorResume.java:79) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onNext(FluxSwitchIfEmpty.java:74) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.MonoNext$NextSubscriber.onNext(MonoNext.java:82) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.FluxConcatMapNoPrefetch$FluxConcatMapNoPrefetchSubscriber.innerNext(FluxConcatMapNoPrefetch.java:259) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.FluxConcatMap$ConcatMapInner.onNext(FluxConcatMap.java:865) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:129) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.MonoPeekTerminal$MonoTerminalPeekSubscriber.onNext(MonoPeekTerminal.java:180) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.Operators$ScalarSubscription.request(Operators.java:2571) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.MonoPeekTerminal$MonoTerminalPeekSubscriber.request(MonoPeekTerminal.java:139) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.request(FluxMapFuseable.java:171) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.request(Operators.java:2331) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.FluxConcatMapNoPrefetch$FluxConcatMapNoPrefetchSubscriber.request(FluxConcatMapNoPrefetch.java:339) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.MonoNext$NextSubscriber.request(MonoNext.java:108) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.set(Operators.java:2367) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.onSubscribe(Operators.java:2241) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.MonoNext$NextSubscriber.onSubscribe(MonoNext.java:70) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.FluxConcatMapNoPrefetch$FluxConcatMapNoPrefetchSubscriber.onSubscribe(FluxConcatMapNoPrefetch.java:164) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:201) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:83) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:76) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:53) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4563) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.subscribeNext(MonoIgnoreThen.java:265) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.MonoIgnoreThen.subscribe(MonoIgnoreThen.java:51) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4563) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.Mono.subscribeWith(Mono.java:4629) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4529) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4465) ~[reactor-core-3.6.3.jar:3.6.3]
+	at org.springframework.test.web.reactive.server.HttpHandlerConnector.lambda$doConnect$2(HttpHandlerConnector.java:100) ~[spring-test-6.1.4.jar:6.1.4]
+	at org.springframework.mock.http.client.reactive.MockClientHttpRequest.lambda$writeWith$2(MockClientHttpRequest.java:124) ~[spring-test-6.1.4.jar:6.1.4]
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:45) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4563) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.FluxConcatIterable$ConcatIterableSubscriber.onComplete(FluxConcatIterable.java:148) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.FluxConcatIterable.subscribe(FluxConcatIterable.java:60) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4563) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.Mono.subscribeWith(Mono.java:4629) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4529) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4465) ~[reactor-core-3.6.3.jar:3.6.3]
+	at org.springframework.test.web.reactive.server.HttpHandlerConnector.doConnect(HttpHandlerConnector.java:114) ~[spring-test-6.1.4.jar:6.1.4]
+	at org.springframework.test.web.reactive.server.HttpHandlerConnector.lambda$connect$0(HttpHandlerConnector.java:81) ~[spring-test-6.1.4.jar:6.1.4]
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:45) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4563) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.MonoSubscribeOn$SubscribeOnSubscriber.run(MonoSubscribeOn.java:126) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.scheduler.WorkerTask.call(WorkerTask.java:84) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.scheduler.WorkerTask.call(WorkerTask.java:37) ~[reactor-core-3.6.3.jar:3.6.3]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:842) ~[na:na]
+
+2025-02-07T12:08:49.624+01:00 ERROR 11480 --- [           main] o.s.t.w.reactive.server.ExchangeResult   : Request details for assertion failure:
+
+> GET /api/insurance/contracts/client/CLIENT-001
+> WebTestClient-Request-Id: [1]
+
+No content
+
+< 500 INTERNAL_SERVER_ERROR Internal Server Error
+< Content-Type: [application/json]
+< Content-Length: [147]
+
+{"timestamp":1738926529514,"path":"/api/insurance/contracts/client/CLIENT-001","status":500,"error":"Internal Server Error","requestId":"1139cd6c"}
+
+]]></system-out>
+  </testcase>
+  <testcase name="shouldReturnNotFoundForInvalidContract" classname="com.example.controller.InsuranceContractControllerTest" time="0.141"/>
+  <testcase name="shouldCreateContract" classname="com.example.controller.InsuranceContractControllerTest" time="0.018">
+    <error message="Type definition error: [simple type, class java.time.Instant]" type="org.springframework.core.codec.CodecException"><![CDATA[org.springframework.core.codec.CodecException: Type definition error: [simple type, class java.time.Instant]
+	at org.springframework.http.codec.json.AbstractJackson2Encoder.encodeValue(AbstractJackson2Encoder.java:256)
+	at org.springframework.http.codec.json.AbstractJackson2Encoder.lambda$encode$0(AbstractJackson2Encoder.java:158)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:113)
+	at reactor.core.publisher.Operators$ScalarSubscription.request(Operators.java:2571)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.request(FluxMapFuseable.java:171)
+	at reactor.core.publisher.MonoSingle$SingleSubscriber.doOnRequest(MonoSingle.java:103)
+	at reactor.core.publisher.Operators$MonoInnerProducerBase.request(Operators.java:2909)
+	at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.set(Operators.java:2367)
+	at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.onSubscribe(Operators.java:2241)
+	at reactor.core.publisher.MonoSingle$SingleSubscriber.onSubscribe(MonoSingle.java:115)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onSubscribe(FluxMapFuseable.java:96)
+	at reactor.core.publisher.MonoJust.subscribe(MonoJust.java:55)
+	at reactor.core.publisher.FluxFromMonoOperator.subscribe(FluxFromMonoOperator.java:85)
+	at reactor.core.publisher.FluxDeferContextual.subscribe(FluxDeferContextual.java:57)
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4563)
+	at reactor.core.publisher.Mono.subscribeWith(Mono.java:4629)
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4529)
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4465)
+	at org.springframework.test.web.reactive.server.HttpHandlerConnector.doConnect(HttpHandlerConnector.java:114)
+	at org.springframework.test.web.reactive.server.HttpHandlerConnector.lambda$connect$0(HttpHandlerConnector.java:81)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:45)
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4563)
+	at reactor.core.publisher.MonoSubscribeOn$SubscribeOnSubscriber.run(MonoSubscribeOn.java:126)
+	at reactor.core.scheduler.WorkerTask.call(WorkerTask.java:84)
+	at reactor.core.scheduler.WorkerTask.call(WorkerTask.java:37)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+	Suppressed: java.lang.Exception: #block terminated with an error
+		at reactor.core.publisher.BlockingSingleSubscriber.blockingGet(BlockingSingleSubscriber.java:144)
+		at reactor.core.publisher.Mono.block(Mono.java:1805)
+		at org.springframework.test.web.reactive.server.DefaultWebTestClient$DefaultRequestBodyUriSpec.exchange(DefaultWebTestClient.java:358)
+		at com.example.controller.InsuranceContractControllerTest.shouldCreateContract(InsuranceContractControllerTest.java:43)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+		at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+		at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+Caused by: com.fasterxml.jackson.databind.exc.InvalidDefinitionException: Java 8 date/time type `java.time.Instant` not supported by default: add Module "com.fasterxml.jackson.datatype:jackson-datatype-jsr310" to enable handling (through reference chain: com.example.model.InsuranceContract["startDate"])
+	at com.fasterxml.jackson.databind.exc.InvalidDefinitionException.from(InvalidDefinitionException.java:77)
+	at com.fasterxml.jackson.databind.SerializerProvider.reportBadDefinition(SerializerProvider.java:1308)
+	at com.fasterxml.jackson.databind.ser.impl.UnsupportedTypeSerializer.serialize(UnsupportedTypeSerializer.java:35)
+	at com.fasterxml.jackson.databind.ser.BeanPropertyWriter.serializeAsField(BeanPropertyWriter.java:732)
+	at com.fasterxml.jackson.databind.ser.std.BeanSerializerBase.serializeFields(BeanSerializerBase.java:772)
+	at com.fasterxml.jackson.databind.ser.BeanSerializer.serialize(BeanSerializer.java:178)
+	at com.fasterxml.jackson.databind.ser.DefaultSerializerProvider._serialize(DefaultSerializerProvider.java:479)
+	at com.fasterxml.jackson.databind.ser.DefaultSerializerProvider.serializeValue(DefaultSerializerProvider.java:318)
+	at com.fasterxml.jackson.databind.ObjectWriter$Prefetch.serialize(ObjectWriter.java:1572)
+	at com.fasterxml.jackson.databind.ObjectWriter.writeValue(ObjectWriter.java:1061)
+	at org.springframework.http.codec.json.AbstractJackson2Encoder.encodeValue(AbstractJackson2Encoder.java:252)
+	... 29 more
+]]></error>
+  </testcase>
+  <testcase name="shouldUpdatePricing" classname="com.example.controller.InsuranceContractControllerTest" time="0.134">
+    <failure message="Status expected:&lt;200 OK&gt; but was:&lt;500 INTERNAL_SERVER_ERROR&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: Status expected:<200 OK> but was:<500 INTERNAL_SERVER_ERROR>
+	at org.springframework.test.util.AssertionErrors.fail(AssertionErrors.java:59)
+	at org.springframework.test.util.AssertionErrors.assertEquals(AssertionErrors.java:122)
+	at org.springframework.test.web.reactive.server.StatusAssertions.lambda$assertStatusAndReturn$4(StatusAssertions.java:236)
+	at org.springframework.test.web.reactive.server.ExchangeResult.assertWithDiagnostics(ExchangeResult.java:222)
+	at org.springframework.test.web.reactive.server.StatusAssertions.assertStatusAndReturn(StatusAssertions.java:236)
+	at org.springframework.test.web.reactive.server.StatusAssertions.isOk(StatusAssertions.java:68)
+	at com.example.controller.InsuranceContractControllerTest.shouldUpdatePricing(InsuranceContractControllerTest.java:86)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+]]></failure>
+    <system-out><![CDATA[2025-02-07T12:08:49.895+01:00 ERROR 11480 --- [     parallel-2] a.w.r.e.AbstractErrorWebExceptionHandler : [5be73eca]  500 Server Error for HTTP PUT "/api/insurance/contracts/CONTRACT-001/pricing"
+
+org.springframework.core.codec.CodecException: Type definition error: [simple type, class java.time.Instant]
+	at org.springframework.http.codec.json.AbstractJackson2Encoder.encodeValue(AbstractJackson2Encoder.java:256) ~[spring-web-6.1.4.jar:6.1.4]
+	Suppressed: reactor.core.publisher.FluxOnAssembly$OnAssemblyException: 
+Error has been observed at the following site(s):
+	*__checkpoint ? Handler com.example.controller.InsuranceContractController#updatePricing(String, VehicleData) [DispatcherHandler]
+	*__checkpoint ? HTTP PUT "/api/insurance/contracts/CONTRACT-001/pricing" [ExceptionHandlingWebHandler]
+Original Stack Trace:
+		at org.springframework.http.codec.json.AbstractJackson2Encoder.encodeValue(AbstractJackson2Encoder.java:256) ~[spring-web-6.1.4.jar:6.1.4]
+		at org.springframework.http.codec.json.AbstractJackson2Encoder.lambda$encode$0(AbstractJackson2Encoder.java:158) ~[spring-web-6.1.4.jar:6.1.4]
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:113) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.Operators$ScalarSubscription.request(Operators.java:2571) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.request(FluxMapFuseable.java:171) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.MonoSingle$SingleSubscriber.doOnRequest(MonoSingle.java:103) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.Operators$MonoInnerProducerBase.request(Operators.java:2909) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.set(Operators.java:2367) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.onSubscribe(Operators.java:2241) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.MonoSingle$SingleSubscriber.onSubscribe(MonoSingle.java:115) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onSubscribe(FluxMapFuseable.java:96) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.MonoJust.subscribe(MonoJust.java:55) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.FluxFromMonoOperator.subscribe(FluxFromMonoOperator.java:85) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.FluxDeferContextual.subscribe(FluxDeferContextual.java:57) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:76) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:165) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.FluxDefaultIfEmpty$DefaultIfEmptySubscriber.onNext(FluxDefaultIfEmpty.java:122) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:129) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.Operators$ScalarSubscription.request(Operators.java:2571) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.request(FluxMapFuseable.java:171) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.FluxDefaultIfEmpty$DefaultIfEmptySubscriber.request(FluxDefaultIfEmpty.java:98) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.request(MonoFlatMap.java:194) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.set(Operators.java:2367) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onSubscribe(FluxOnErrorResume.java:74) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onSubscribe(MonoFlatMap.java:117) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.Operators$BaseFluxToMonoOperator.onSubscribe(Operators.java:2051) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onSubscribe(FluxMapFuseable.java:96) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.MonoJust.subscribe(MonoJust.java:55) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:76) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:165) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onNext(FluxOnErrorResume.java:79) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onNext(FluxOnErrorResume.java:79) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.FluxPeek$PeekSubscriber.onNext(FluxPeek.java:200) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.complete(MonoIgnoreThen.java:294) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.onNext(MonoIgnoreThen.java:188) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:158) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.MonoZip$ZipCoordinator.signal(MonoZip.java:297) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.MonoZip$ZipInner.onNext(MonoZip.java:478) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.MonoPeekTerminal$MonoTerminalPeekSubscriber.onNext(MonoPeekTerminal.java:180) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.FluxDefaultIfEmpty$DefaultIfEmptySubscriber.onNext(FluxDefaultIfEmpty.java:122) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onNext(FluxSwitchIfEmpty.java:74) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onNext(FluxOnErrorResume.java:79) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:158) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onNext(FluxContextWrite.java:107) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableConditionalSubscriber.onNext(FluxMapFuseable.java:299) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableConditionalSubscriber.onNext(FluxFilterFuseable.java:337) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.Operators$BaseFluxToMonoOperator.completePossiblyEmpty(Operators.java:2097) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.MonoCollect$CollectSubscriber.onComplete(MonoCollect.java:145) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onComplete(FluxPeekFuseable.java:277) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onComplete(FluxPeekFuseable.java:277) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onComplete(FluxPeekFuseable.java:277) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onComplete(FluxPeekFuseable.java:277) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onComplete(FluxPeekFuseable.java:277) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onComplete(FluxContextWrite.java:126) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.Operators$ScalarSubscription.request(Operators.java:2573) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.request(FluxContextWrite.java:136) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.request(FluxPeekFuseable.java:144) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.request(FluxPeekFuseable.java:144) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.request(FluxPeekFuseable.java:144) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.request(FluxPeekFuseable.java:144) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.request(FluxPeekFuseable.java:144) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.Operators$BaseFluxToMonoOperator.request(Operators.java:2067) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableConditionalSubscriber.request(FluxFilterFuseable.java:411) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableConditionalSubscriber.request(FluxMapFuseable.java:360) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.request(FluxContextWrite.java:136) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.request(MonoFlatMap.java:194) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.set(Operators.java:2367) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onSubscribe(FluxOnErrorResume.java:74) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onSubscribe(MonoFlatMap.java:117) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onSubscribe(FluxContextWrite.java:101) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableConditionalSubscriber.onSubscribe(FluxMapFuseable.java:265) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableConditionalSubscriber.onSubscribe(FluxFilterFuseable.java:305) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.Operators$BaseFluxToMonoOperator.onSubscribe(Operators.java:2051) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onSubscribe(FluxPeekFuseable.java:178) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onSubscribe(FluxPeekFuseable.java:178) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onSubscribe(FluxPeekFuseable.java:178) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onSubscribe(FluxPeekFuseable.java:178) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onSubscribe(FluxPeekFuseable.java:178) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onSubscribe(FluxContextWrite.java:101) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.MonoJust.subscribe(MonoJust.java:55) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:76) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.MonoDeferContextual.subscribe(MonoDeferContextual.java:55) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:76) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.MonoZip$ZipCoordinator.request(MonoZip.java:220) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.request(MonoFlatMap.java:194) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.onSubscribe(MonoIgnoreThen.java:135) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onSubscribe(MonoFlatMap.java:117) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.MonoZip.subscribe(MonoZip.java:129) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:76) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:53) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.subscribeNext(MonoIgnoreThen.java:241) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.onComplete(MonoIgnoreThen.java:204) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onComplete(MonoFlatMap.java:189) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.Operators.complete(Operators.java:137) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.MonoZip.subscribe(MonoZip.java:121) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4563) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.subscribeNext(MonoIgnoreThen.java:265) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.MonoIgnoreThen.subscribe(MonoIgnoreThen.java:51) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:76) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:165) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onNext(FluxOnErrorResume.java:79) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onNext(FluxSwitchIfEmpty.java:74) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.MonoNext$NextSubscriber.onNext(MonoNext.java:82) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.FluxConcatMapNoPrefetch$FluxConcatMapNoPrefetchSubscriber.innerNext(FluxConcatMapNoPrefetch.java:259) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.FluxConcatMap$ConcatMapInner.onNext(FluxConcatMap.java:865) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:129) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.MonoPeekTerminal$MonoTerminalPeekSubscriber.onNext(MonoPeekTerminal.java:180) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.Operators$ScalarSubscription.request(Operators.java:2571) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.MonoPeekTerminal$MonoTerminalPeekSubscriber.request(MonoPeekTerminal.java:139) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.request(FluxMapFuseable.java:171) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.request(Operators.java:2331) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.FluxConcatMapNoPrefetch$FluxConcatMapNoPrefetchSubscriber.request(FluxConcatMapNoPrefetch.java:339) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.MonoNext$NextSubscriber.request(MonoNext.java:108) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.set(Operators.java:2367) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.onSubscribe(Operators.java:2241) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.MonoNext$NextSubscriber.onSubscribe(MonoNext.java:70) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.FluxConcatMapNoPrefetch$FluxConcatMapNoPrefetchSubscriber.onSubscribe(FluxConcatMapNoPrefetch.java:164) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:201) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:83) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:76) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:53) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4563) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.subscribeNext(MonoIgnoreThen.java:265) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.MonoIgnoreThen.subscribe(MonoIgnoreThen.java:51) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4563) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.Mono.subscribeWith(Mono.java:4629) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4529) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4465) ~[reactor-core-3.6.3.jar:3.6.3]
+		at org.springframework.test.web.reactive.server.HttpHandlerConnector.lambda$doConnect$2(HttpHandlerConnector.java:100) ~[spring-test-6.1.4.jar:6.1.4]
+		at org.springframework.mock.http.client.reactive.MockClientHttpRequest.lambda$writeWith$2(MockClientHttpRequest.java:124) ~[spring-test-6.1.4.jar:6.1.4]
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:45) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4563) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.FluxConcatIterable$ConcatIterableSubscriber.onComplete(FluxConcatIterable.java:148) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.FluxConcatIterable.subscribe(FluxConcatIterable.java:60) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.MonoFromFluxOperator.subscribe(MonoFromFluxOperator.java:83) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:165) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onNext(FluxSwitchIfEmpty.java:74) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.Operators$MonoInnerProducerBase.complete(Operators.java:2842) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.MonoSingle$SingleSubscriber.onComplete(MonoSingle.java:180) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onComplete(FluxMapFuseable.java:152) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.Operators$ScalarSubscription.request(Operators.java:2573) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.request(FluxMapFuseable.java:171) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.MonoSingle$SingleSubscriber.doOnRequest(MonoSingle.java:103) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.Operators$MonoInnerProducerBase.request(Operators.java:2909) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.set(Operators.java:2367) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.onSubscribe(Operators.java:2241) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.MonoSingle$SingleSubscriber.onSubscribe(MonoSingle.java:115) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onSubscribe(FluxMapFuseable.java:96) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.MonoJust.subscribe(MonoJust.java:55) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.FluxFromMonoOperator.subscribe(FluxFromMonoOperator.java:85) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.FluxDeferContextual.subscribe(FluxDeferContextual.java:57) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4563) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.Mono.subscribeWith(Mono.java:4629) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4529) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4465) ~[reactor-core-3.6.3.jar:3.6.3]
+		at org.springframework.test.web.reactive.server.HttpHandlerConnector.doConnect(HttpHandlerConnector.java:114) ~[spring-test-6.1.4.jar:6.1.4]
+		at org.springframework.test.web.reactive.server.HttpHandlerConnector.lambda$connect$0(HttpHandlerConnector.java:81) ~[spring-test-6.1.4.jar:6.1.4]
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:45) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4563) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.publisher.MonoSubscribeOn$SubscribeOnSubscriber.run(MonoSubscribeOn.java:126) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.scheduler.WorkerTask.call(WorkerTask.java:84) ~[reactor-core-3.6.3.jar:3.6.3]
+		at reactor.core.scheduler.WorkerTask.call(WorkerTask.java:37) ~[reactor-core-3.6.3.jar:3.6.3]
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+		at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+		at java.base/java.lang.Thread.run(Thread.java:842) ~[na:na]
+Caused by: com.fasterxml.jackson.databind.exc.InvalidDefinitionException: Java 8 date/time type `java.time.Instant` not supported by default: add Module "com.fasterxml.jackson.datatype:jackson-datatype-jsr310" to enable handling (through reference chain: com.example.model.InsuranceContract["startDate"])
+	at com.fasterxml.jackson.databind.exc.InvalidDefinitionException.from(InvalidDefinitionException.java:77) ~[jackson-databind-2.15.4.jar:2.15.4]
+	at com.fasterxml.jackson.databind.SerializerProvider.reportBadDefinition(SerializerProvider.java:1308) ~[jackson-databind-2.15.4.jar:2.15.4]
+	at com.fasterxml.jackson.databind.ser.impl.UnsupportedTypeSerializer.serialize(UnsupportedTypeSerializer.java:35) ~[jackson-databind-2.15.4.jar:2.15.4]
+	at com.fasterxml.jackson.databind.ser.BeanPropertyWriter.serializeAsField(BeanPropertyWriter.java:732) ~[jackson-databind-2.15.4.jar:2.15.4]
+	at com.fasterxml.jackson.databind.ser.std.BeanSerializerBase.serializeFields(BeanSerializerBase.java:772) ~[jackson-databind-2.15.4.jar:2.15.4]
+	at com.fasterxml.jackson.databind.ser.BeanSerializer.serialize(BeanSerializer.java:178) ~[jackson-databind-2.15.4.jar:2.15.4]
+	at com.fasterxml.jackson.databind.ser.DefaultSerializerProvider._serialize(DefaultSerializerProvider.java:479) ~[jackson-databind-2.15.4.jar:2.15.4]
+	at com.fasterxml.jackson.databind.ser.DefaultSerializerProvider.serializeValue(DefaultSerializerProvider.java:318) ~[jackson-databind-2.15.4.jar:2.15.4]
+	at com.fasterxml.jackson.databind.ObjectWriter$Prefetch.serialize(ObjectWriter.java:1572) ~[jackson-databind-2.15.4.jar:2.15.4]
+	at com.fasterxml.jackson.databind.ObjectWriter.writeValue(ObjectWriter.java:1061) ~[jackson-databind-2.15.4.jar:2.15.4]
+	at org.springframework.http.codec.json.AbstractJackson2Encoder.encodeValue(AbstractJackson2Encoder.java:252) ~[spring-web-6.1.4.jar:6.1.4]
+	at org.springframework.http.codec.json.AbstractJackson2Encoder.lambda$encode$0(AbstractJackson2Encoder.java:158) ~[spring-web-6.1.4.jar:6.1.4]
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:113) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.Operators$ScalarSubscription.request(Operators.java:2571) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.request(FluxMapFuseable.java:171) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.MonoSingle$SingleSubscriber.doOnRequest(MonoSingle.java:103) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.Operators$MonoInnerProducerBase.request(Operators.java:2909) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.set(Operators.java:2367) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.onSubscribe(Operators.java:2241) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.MonoSingle$SingleSubscriber.onSubscribe(MonoSingle.java:115) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onSubscribe(FluxMapFuseable.java:96) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.MonoJust.subscribe(MonoJust.java:55) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.FluxFromMonoOperator.subscribe(FluxFromMonoOperator.java:85) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.FluxDeferContextual.subscribe(FluxDeferContextual.java:57) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:76) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:165) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.FluxDefaultIfEmpty$DefaultIfEmptySubscriber.onNext(FluxDefaultIfEmpty.java:122) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:129) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.Operators$ScalarSubscription.request(Operators.java:2571) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.request(FluxMapFuseable.java:171) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.FluxDefaultIfEmpty$DefaultIfEmptySubscriber.request(FluxDefaultIfEmpty.java:98) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.MonoFlatMap$FlatMapMain.request(MonoFlatMap.java:194) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.FluxOnAssembly$OnAssemblySubscriber.request(FluxOnAssembly.java:649) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.set(Operators.java:2367) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onSubscribe(FluxOnErrorResume.java:74) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.FluxOnAssembly$OnAssemblySubscriber.onSubscribe(FluxOnAssembly.java:633) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.MonoFlatMap$FlatMapMain.onSubscribe(MonoFlatMap.java:117) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.Operators$BaseFluxToMonoOperator.onSubscribe(Operators.java:2051) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onSubscribe(FluxMapFuseable.java:96) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.MonoJust.subscribe(MonoJust.java:55) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:76) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:165) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onNext(FluxOnErrorResume.java:79) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onNext(FluxOnErrorResume.java:79) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.FluxPeek$PeekSubscriber.onNext(FluxPeek.java:200) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.complete(MonoIgnoreThen.java:294) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.onNext(MonoIgnoreThen.java:188) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:158) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.MonoZip$ZipCoordinator.signal(MonoZip.java:297) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.MonoZip$ZipInner.onNext(MonoZip.java:478) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.MonoPeekTerminal$MonoTerminalPeekSubscriber.onNext(MonoPeekTerminal.java:180) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.FluxDefaultIfEmpty$DefaultIfEmptySubscriber.onNext(FluxDefaultIfEmpty.java:122) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onNext(FluxSwitchIfEmpty.java:74) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onNext(FluxOnErrorResume.java:79) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:158) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onNext(FluxContextWrite.java:107) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableConditionalSubscriber.onNext(FluxMapFuseable.java:299) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.FluxFilterFuseable$FilterFuseableConditionalSubscriber.onNext(FluxFilterFuseable.java:337) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.Operators$BaseFluxToMonoOperator.completePossiblyEmpty(Operators.java:2097) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.MonoCollect$CollectSubscriber.onComplete(MonoCollect.java:145) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onComplete(FluxPeekFuseable.java:277) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onComplete(FluxPeekFuseable.java:277) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onComplete(FluxPeekFuseable.java:277) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onComplete(FluxPeekFuseable.java:277) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onComplete(FluxPeekFuseable.java:277) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onComplete(FluxContextWrite.java:126) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.Operators$ScalarSubscription.request(Operators.java:2573) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.request(FluxContextWrite.java:136) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.request(FluxPeekFuseable.java:144) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.request(FluxPeekFuseable.java:144) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.request(FluxPeekFuseable.java:144) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.request(FluxPeekFuseable.java:144) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.request(FluxPeekFuseable.java:144) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.Operators$BaseFluxToMonoOperator.request(Operators.java:2067) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.FluxFilterFuseable$FilterFuseableConditionalSubscriber.request(FluxFilterFuseable.java:411) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableConditionalSubscriber.request(FluxMapFuseable.java:360) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.request(FluxContextWrite.java:136) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.MonoFlatMap$FlatMapMain.request(MonoFlatMap.java:194) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.set(Operators.java:2367) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onSubscribe(FluxOnErrorResume.java:74) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.MonoFlatMap$FlatMapMain.onSubscribe(MonoFlatMap.java:117) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onSubscribe(FluxContextWrite.java:101) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableConditionalSubscriber.onSubscribe(FluxMapFuseable.java:265) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.FluxFilterFuseable$FilterFuseableConditionalSubscriber.onSubscribe(FluxFilterFuseable.java:305) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.Operators$BaseFluxToMonoOperator.onSubscribe(Operators.java:2051) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onSubscribe(FluxPeekFuseable.java:178) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onSubscribe(FluxPeekFuseable.java:178) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onSubscribe(FluxPeekFuseable.java:178) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onSubscribe(FluxPeekFuseable.java:178) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onSubscribe(FluxPeekFuseable.java:178) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onSubscribe(FluxContextWrite.java:101) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.MonoJust.subscribe(MonoJust.java:55) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:76) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.MonoDeferContextual.subscribe(MonoDeferContextual.java:55) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:76) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.MonoZip$ZipCoordinator.request(MonoZip.java:220) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.MonoFlatMap$FlatMapMain.request(MonoFlatMap.java:194) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.onSubscribe(MonoIgnoreThen.java:135) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.MonoFlatMap$FlatMapMain.onSubscribe(MonoFlatMap.java:117) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.MonoZip.subscribe(MonoZip.java:129) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:76) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:53) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.subscribeNext(MonoIgnoreThen.java:241) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.onComplete(MonoIgnoreThen.java:204) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.MonoFlatMap$FlatMapMain.onComplete(MonoFlatMap.java:189) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.Operators.complete(Operators.java:137) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.MonoZip.subscribe(MonoZip.java:121) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4563) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.subscribeNext(MonoIgnoreThen.java:265) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.MonoIgnoreThen.subscribe(MonoIgnoreThen.java:51) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:76) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:165) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onNext(FluxOnErrorResume.java:79) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onNext(FluxSwitchIfEmpty.java:74) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.MonoNext$NextSubscriber.onNext(MonoNext.java:82) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.FluxConcatMapNoPrefetch$FluxConcatMapNoPrefetchSubscriber.innerNext(FluxConcatMapNoPrefetch.java:259) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.FluxConcatMap$ConcatMapInner.onNext(FluxConcatMap.java:865) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:129) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.MonoPeekTerminal$MonoTerminalPeekSubscriber.onNext(MonoPeekTerminal.java:180) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.Operators$ScalarSubscription.request(Operators.java:2571) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.MonoPeekTerminal$MonoTerminalPeekSubscriber.request(MonoPeekTerminal.java:139) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.request(FluxMapFuseable.java:171) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.request(Operators.java:2331) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.FluxConcatMapNoPrefetch$FluxConcatMapNoPrefetchSubscriber.request(FluxConcatMapNoPrefetch.java:339) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.MonoNext$NextSubscriber.request(MonoNext.java:108) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.set(Operators.java:2367) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.onSubscribe(Operators.java:2241) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.MonoNext$NextSubscriber.onSubscribe(MonoNext.java:70) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.FluxConcatMapNoPrefetch$FluxConcatMapNoPrefetchSubscriber.onSubscribe(FluxConcatMapNoPrefetch.java:164) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:201) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:83) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:76) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:53) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4563) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.subscribeNext(MonoIgnoreThen.java:265) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.MonoIgnoreThen.subscribe(MonoIgnoreThen.java:51) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4563) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.Mono.subscribeWith(Mono.java:4629) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4529) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4465) ~[reactor-core-3.6.3.jar:3.6.3]
+	at org.springframework.test.web.reactive.server.HttpHandlerConnector.lambda$doConnect$2(HttpHandlerConnector.java:100) ~[spring-test-6.1.4.jar:6.1.4]
+	at org.springframework.mock.http.client.reactive.MockClientHttpRequest.lambda$writeWith$2(MockClientHttpRequest.java:124) ~[spring-test-6.1.4.jar:6.1.4]
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:45) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4563) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.FluxConcatIterable$ConcatIterableSubscriber.onComplete(FluxConcatIterable.java:148) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.FluxConcatIterable.subscribe(FluxConcatIterable.java:60) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.MonoFromFluxOperator.subscribe(MonoFromFluxOperator.java:83) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:165) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onNext(FluxSwitchIfEmpty.java:74) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.Operators$MonoInnerProducerBase.complete(Operators.java:2842) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.MonoSingle$SingleSubscriber.onComplete(MonoSingle.java:180) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onComplete(FluxMapFuseable.java:152) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.Operators$ScalarSubscription.request(Operators.java:2573) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.request(FluxMapFuseable.java:171) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.MonoSingle$SingleSubscriber.doOnRequest(MonoSingle.java:103) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.Operators$MonoInnerProducerBase.request(Operators.java:2909) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.set(Operators.java:2367) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.onSubscribe(Operators.java:2241) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.MonoSingle$SingleSubscriber.onSubscribe(MonoSingle.java:115) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onSubscribe(FluxMapFuseable.java:96) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.MonoJust.subscribe(MonoJust.java:55) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.FluxFromMonoOperator.subscribe(FluxFromMonoOperator.java:85) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.FluxDeferContextual.subscribe(FluxDeferContextual.java:57) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4563) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.Mono.subscribeWith(Mono.java:4629) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4529) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4465) ~[reactor-core-3.6.3.jar:3.6.3]
+	at org.springframework.test.web.reactive.server.HttpHandlerConnector.doConnect(HttpHandlerConnector.java:114) ~[spring-test-6.1.4.jar:6.1.4]
+	at org.springframework.test.web.reactive.server.HttpHandlerConnector.lambda$connect$0(HttpHandlerConnector.java:81) ~[spring-test-6.1.4.jar:6.1.4]
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:45) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4563) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.publisher.MonoSubscribeOn$SubscribeOnSubscriber.run(MonoSubscribeOn.java:126) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.scheduler.WorkerTask.call(WorkerTask.java:84) ~[reactor-core-3.6.3.jar:3.6.3]
+	at reactor.core.scheduler.WorkerTask.call(WorkerTask.java:37) ~[reactor-core-3.6.3.jar:3.6.3]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:842) ~[na:na]
+
+2025-02-07T12:08:49.915+01:00 ERROR 11480 --- [           main] o.s.t.w.reactive.server.ExchangeResult   : Request details for assertion failure:
+
+> PUT /api/insurance/contracts/CONTRACT-001/pricing
+> WebTestClient-Request-Id: [4]
+> Content-Type: [application/json]
+> Content-Length: [395]
+
+{"id":null,"contractId":"CONTRACT-001","riskAssessment":null,"data":{"speed":{"value":120.0,"unit":"km/h"},"rpm":{"value":3500.0,"unit":"rpm"},"timestamp":1738926529841,"THROTTLE_POS":{"value":75.0,"unit":"%"},"FUEL_LEVEL":null,"MAF":null,"ENGINE_LOAD":{"value":80.0,"unit":"%"},"FUEL_RATE":null,"INTAKE_PRESSURE":null,"ACCELERATOR_POS_D":null,"BAROMETRIC_PRESSURE":null},"vehicle_id":"VEH-001"}
+
+< 500 INTERNAL_SERVER_ERROR Internal Server Error
+< Content-Type: [application/json]
+< Content-Length: [150]
+
+{"timestamp":1738926529894,"path":"/api/insurance/contracts/CONTRACT-001/pricing","status":500,"error":"Internal Server Error","requestId":"5be73eca"}
+
+]]></system-out>
+  </testcase>
+</testsuite>

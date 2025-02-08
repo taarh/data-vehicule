@@ -1,0 +1,8 @@
+com\example\service\InsuranceContractServiceTest.class
+com\example\controller\ClientControllerTest.class
+com\example\service\ClientServiceTest.class
+com\example\service\VehicleDataConsumerIntegrationTest.class
+com\example\service\RiskAssessmentServiceTest.class
+com\example\service\VehicleDataServiceTest.class
+com\example\config\TestKafkaConfig.class
+com\example\utils\TestDataGenerator.class
