@@ -1,10 +1,12 @@
 package com.example.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import java.time.Instant;
+import java.util.Map;
 
 @Data
 @Document(collection = "vehicle_data")
@@ -21,6 +23,7 @@ public class VehicleData {
     private Instant timestamp;
 
     @Data
+    @JsonIgnoreProperties(ignoreUnknown = true)
     public static class SensorData {
         @JsonProperty("SPEED")
         private Measurement speed;
@@ -52,10 +55,18 @@ public class VehicleData {
         @JsonProperty("BAROMETRIC_PRESSURE")
         private Measurement barometricPressure;
         
+        @JsonProperty("BRAKE_PRESSURE")
+        private Measurement brakePressure;
+        
         private Instant timestamp;
+        
+        // Champ pour stocker les propriétés supplémentaires inconnues
+        @JsonProperty("additionalProperties")
+        private Map<String, Measurement> additionalProperties;
     }
 
     @Data
+    @JsonIgnoreProperties(ignoreUnknown = true)
     public static class Measurement {
         private double value;
         private String unit;

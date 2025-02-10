@@ -1,6 +1,7 @@
 package com.example.service;
 
 import com.example.model.VehicleData;
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -25,25 +26,28 @@ public class VehicleDataConsumer {
     )
     public void consume(String message) {
         log.debug("Received message: {}", message);
-        processMessage(message)
-            .doOnNext(data -> log.info("Processed vehicle data for vehicle: {}", data.getVehicleId()))
-            .doOnError(error -> log.error("Error processing message: {}", error.getMessage()))
-            .subscribe(
-                vehicleDataSink::tryEmitNext,
-                error -> log.error("Error emitting to sink: {}", error.getMessage())
-            );
+        try {
+            VehicleData vehicleData = objectMapper.readValue(message, VehicleData.class);
+            processMessage(vehicleData)
+                .doOnNext(data -> log.info("Processed vehicle data for vehicle: {}", data.getVehicleId()))
+                .doOnError(error -> log.error("Error processing vehicle data: {}", error.getMessage()))
+                .subscribe(
+                    vehicleDataSink::tryEmitNext,
+                    error -> log.error("Error emitting to sink: {}", error.getMessage())
+                );
+        } catch (JsonProcessingException e) {
+            log.error("Error deserializing message: {}. Message content: {}", e.getMessage(), message);
+        }
     }
 
     public Flux<VehicleData> consumeVehicleData() {
         return vehicleDataSink.asFlux();
     }
 
-    public Mono<VehicleData> processMessage(String message) {
-        try {
-            VehicleData vehicleData = objectMapper.readValue(message, VehicleData.class);
-            return vehicleDataService.processVehicleData(vehicleData);
-        } catch (Exception e) {
-            return Mono.error(new RuntimeException("Error processing message: " + e.getMessage(), e));
+    private Mono<VehicleData> processMessage(VehicleData data) {
+        if (data == null) {
+            return Mono.error(new IllegalArgumentException("Vehicle data cannot be null"));
         }
+        return vehicleDataService.processVehicleData(data);
     }
 } 
