@@ -1,0 +1,13 @@
+# Environment files
+.env.prod
+
+# Build files
+target/
+*.jar
+
+# IDE files
+.idea/
+*.iml
+
+# Docker volumes
+mongodb_data/ 
