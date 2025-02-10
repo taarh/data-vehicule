@@ -1,4 +1,3 @@
-com\example\controller\ClientController.class
 com\example\repository\ClientRepository.class
 com\example\repository\ContratRepository.class
 com\example\repository\InsuranceContractRepository.class
@@ -25,7 +24,6 @@ com\example\model\RiskFactorType.class
 com\example\model\RiskAssessment.class
 com\example\model\RiskEvent.class
 com\example\service\InsuranceContractService.class
-com\example\service\ClientService.class
 com\example\model\InsuranceContract.class
 com\example\service\RiskAssessmentService.class
 com\example\model\Client.class
