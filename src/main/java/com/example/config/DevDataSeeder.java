@@ -5,7 +5,9 @@ import com.example.model.Contrat;
 import com.example.model.VehicleData;
 import com.example.repository.ClientRepository;
 import com.example.repository.ContratRepository;
+import com.example.repository.UserRepository;
 import com.example.repository.VehicleDataRepository;
+import com.example.service.UserService;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.RequiredArgsConstructor;
@@ -37,6 +39,8 @@ public class DevDataSeeder {
 
     private final ClientRepository clientRepository;
     private final ContratRepository contratRepository;
+    private final UserRepository userRepository;
+    private final UserService userService;
     private final VehicleDataRepository vehicleDataRepository;
     private final KafkaTemplate<String, String> kafkaTemplate;
     private final ObjectMapper objectMapper;
@@ -50,12 +54,22 @@ public class DevDataSeeder {
     public CommandLineRunner seedDevData() {
         return args -> {
             log.info("Dev profile: seeding data (JSON -> Kafka -> MongoDB for vehicle data)...");
-            seedClientsAndContrats()
+            seedDefaultUser()
+                .then(seedClientsAndContrats())
                 .then(sendVehicleDataFromJsonToKafka())
                 .doOnSuccess(v -> log.info("Dev data seeding completed."))
                 .doOnError(e -> log.error("Dev data seeding failed: {}", e.getMessage()))
                 .block();
         };
+    }
+
+    private Mono<Void> seedDefaultUser() {
+        return userRepository.count()
+                .filter(count -> count == 0)
+                .flatMap(c -> userService.createUser("admin", "admin123", "USER", "ADMIN"))
+                .doOnSuccess(u -> log.info("Default user created: admin / admin123"))
+                .then()
+                .onErrorResume(e -> Mono.empty());
     }
 
     private Mono<Void> seedClientsAndContrats() {

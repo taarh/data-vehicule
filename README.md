@@ -26,6 +26,8 @@ Backend **Spring Boot 3** (Java 17) application for vehicle monitoring and insur
 
 With profile **dev**, on startup the app loads vehicle data from **`src/main/resources/data/vehicle-data-dev.json`**, sends each record to the Kafka topic `vehicle-data`, and the existing consumer inserts them into MongoDB. Clients and contrats are still seeded directly if collections are empty. You can edit the JSON file to add or change initial vehicle data.
 
+**Authentication:** API is protected by JWT. Users are stored in MongoDB (`users` collection); passwords are hashed with **BCrypt** (salt is part of the hash). You log in with **POST /api/auth/login** (username + password), get a token, then call other APIs with header **`Authorization: Bearer <token>`**. In dev, a default user **admin / admin123** is created if no users exist.
+
 ---
 
 ## Prerequisites
@@ -58,6 +60,23 @@ docker-compose -f docker-compose.dev.yml --env-file .env.dev up --build
 - Swagger UI: **http://localhost:8080/swagger-ui.html**
 - Health: **http://localhost:8080/actuator/health**
 - MongoDB: `localhost:27017`, Kafka: `localhost:9092`
+
+### Authentication (all options)
+
+1. **Login** to get a token:
+   ```bash
+   curl -X POST http://localhost:8080/api/auth/login \
+     -H "Content-Type: application/json" \
+     -d '{"username":"admin","password":"admin123"}'
+   ```
+   Response: `{"token":"eyJ...", "type":"Bearer"}`
+
+2. **Call any other API** with the token:
+   ```bash
+   curl -H "Authorization: Bearer <your-token>" http://localhost:8080/api/vehicle-data/DEV-VEH-001/latest
+   ```
+
+3. **In Swagger UI:** click **Authorize**, enter `Bearer <your-token>` (or just the token if the UI adds "Bearer "), then **Authorize**. All requests will include the header.
 
 ---
 
@@ -93,6 +112,7 @@ Uses `docker-compose.prod.yml`. You must provide `.env.prod` with at least:
 - `MONGODB_URI`
 - `KAFKA_BROKERS`
 - `KAFKA_SASL_JAAS_CONFIG` (and related Kafka auth vars if using SASL)
+- `JWT_SECRET` (min 32 characters for HS256; use a strong secret in production)
 
 Then:
 
