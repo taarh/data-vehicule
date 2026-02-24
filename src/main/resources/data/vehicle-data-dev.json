@@ -1,0 +1,46 @@
+[
+  {
+    "vehicle_id": "DEV-VEH-001",
+    "contractId": "CONTRACT-DEV-001",
+    "timestamp": "2025-02-23T10:00:00Z",
+    "data": {
+      "SPEED": { "value": 65, "unit": "km/h" },
+      "RPM": { "value": 2200, "unit": "rpm" },
+      "timestamp": "2025-02-23T10:00:00Z"
+    }
+  },
+  {
+    "vehicle_id": "DEV-VEH-002",
+    "contractId": "CONTRACT-DEV-002",
+    "timestamp": "2025-02-23T10:05:00Z",
+    "data": {
+      "SPEED": { "value": 95, "unit": "km/h" },
+      "RPM": { "value": 3200, "unit": "rpm" },
+      "ENGINE_LOAD": { "value": 70, "unit": "%" },
+      "timestamp": "2025-02-23T10:05:00Z"
+    }
+  },
+  {
+    "vehicle_id": "DEV-VEH-003",
+    "contractId": "CONTRACT-DEV-003",
+    "timestamp": "2025-02-23T10:10:00Z",
+    "data": {
+      "SPEED": { "value": 50, "unit": "km/h" },
+      "RPM": { "value": 1800, "unit": "rpm" },
+      "THROTTLE_POS": { "value": 35, "unit": "%" },
+      "timestamp": "2025-02-23T10:10:00Z"
+    }
+  },
+  {
+    "vehicle_id": "DEV-VEH-HIGH-RISK",
+    "contractId": "CONTRACT-DEV-004",
+    "timestamp": "2025-02-23T10:15:00Z",
+    "data": {
+      "SPEED": { "value": 130, "unit": "km/h" },
+      "RPM": { "value": 4200, "unit": "rpm" },
+      "ENGINE_LOAD": { "value": 85, "unit": "%" },
+      "THROTTLE_POS": { "value": 90, "unit": "%" },
+      "timestamp": "2025-02-23T10:15:00Z"
+    }
+  }
+]

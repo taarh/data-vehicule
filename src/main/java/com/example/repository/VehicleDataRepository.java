@@ -28,4 +28,10 @@ public interface VehicleDataRepository extends ReactiveMongoRepository<VehicleDa
     );
     
     Mono<Long> countByVehicleId(String vehicleId);
+
+    /**
+     * Used for idempotent consumption: find by business key to detect duplicates.
+     */
+    Mono<VehicleData> findByVehicleIdAndContractIdAndTimestamp(
+            String vehicleId, String contractId, java.time.Instant timestamp);
 } 

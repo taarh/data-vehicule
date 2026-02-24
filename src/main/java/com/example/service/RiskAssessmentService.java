@@ -152,11 +152,21 @@ public class RiskAssessmentService {
     }
 
     private Mono<RiskEvent> createRiskEvent(VehicleData data) {
-        RiskEvent event = new RiskEvent();
-        event.setVehicleId(data.getVehicleId());
-        event.setType(RiskEventType.SPEEDING);
-        event.setSeverity(data.getRiskAssessment().getScore() / 10.0); // Normalize to 0-1 scale
-        return riskEventRepository.save(event);
+        Instant timestamp = data.getTimestamp() != null ? data.getTimestamp() : Instant.now();
+        String contractId = data.getContractId() != null ? data.getContractId() : "";
+        return riskEventRepository
+                .findFirstByVehicleIdAndContractIdAndTimestamp(data.getVehicleId(), contractId, timestamp)
+                .flatMap(existing -> Mono.just(existing))
+                .switchIfEmpty(Mono.defer(() -> {
+                    RiskEvent event = new RiskEvent();
+                    event.setVehicleId(data.getVehicleId());
+                    event.setContractId(data.getContractId());
+                    event.setType(RiskEventType.SPEEDING);
+                    event.setSeverity(data.getRiskAssessment().getScore() / 10.0);
+                    event.setTimestamp(timestamp);
+                    event.setDescription("High risk detected: score " + data.getRiskAssessment().getScore() + ", level " + data.getRiskAssessment().getLevel());
+                    return riskEventRepository.save(event);
+                }));
     }
 
     private double getValueOrDefault(VehicleData.Measurement measurement, double defaultValue) {

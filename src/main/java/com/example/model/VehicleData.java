@@ -4,12 +4,15 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.index.CompoundIndex;
 import org.springframework.data.mongodb.core.mapping.Document;
+
 import java.time.Instant;
 import java.util.Map;
 
 @Data
 @Document(collection = "vehicle_data")
+@CompoundIndex(name = "vehicle_contract_time_uidx", def = "{ 'vehicleId': 1, 'contractId': 1, 'timestamp': 1 }", unique = true)
 public class VehicleData {
     @Id
     private String id;

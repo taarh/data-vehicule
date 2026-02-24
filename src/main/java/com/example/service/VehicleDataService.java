@@ -4,6 +4,7 @@ import com.example.model.VehicleData;
 import com.example.repository.VehicleDataRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.dao.DuplicateKeyException;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
@@ -33,14 +34,35 @@ public class VehicleDataService {
                 log.error("Error processing vehicle data: {}", error.getMessage()));
     }
 
+    /**
+     * Saves vehicle data with deduplication: if a record with the same vehicleId, contractId and timestamp
+     * already exists, returns it without inserting again (idempotent for Kafka re-delivery or duplicate messages).
+     */
     public Mono<VehicleData> saveVehicleData(VehicleData data) {
         if (data.getTimestamp() == null) {
             data.setTimestamp(Instant.now());
         }
-        log.debug("Saving vehicle data for vehicleId: {}", data.getVehicleId());
-        return vehicleDataRepository.save(data)
-            .doOnSuccess(savedData -> log.debug("Successfully saved data for vehicleId: {}", savedData.getVehicleId()))
-            .doOnError(error -> log.error("Error saving data for vehicleId: {}", data.getVehicleId(), error));
+        return vehicleDataRepository
+                .findByVehicleIdAndContractIdAndTimestamp(
+                        data.getVehicleId(),
+                        data.getContractId() != null ? data.getContractId() : "",
+                        data.getTimestamp())
+                .flatMap(existing -> {
+                    log.debug("Duplicate vehicle data skipped (idempotent): vehicleId={}, contractId={}, timestamp={}",
+                            data.getVehicleId(), data.getContractId(), data.getTimestamp());
+                    return Mono.just(existing);
+                })
+                .switchIfEmpty(Mono.defer(() -> vehicleDataRepository.save(data)
+                        .doOnSuccess(saved -> log.debug("Saved vehicle data for vehicleId: {}", saved.getVehicleId()))
+                        .doOnError(error -> log.error("Error saving vehicle data for vehicleId: {}", data.getVehicleId(), error))
+                        .onErrorResume(DuplicateKeyException.class, e -> {
+                            log.debug("Duplicate key (concurrent insert), returning existing: vehicleId={}, timestamp={}",
+                                    data.getVehicleId(), data.getTimestamp());
+                            return vehicleDataRepository.findByVehicleIdAndContractIdAndTimestamp(
+                                    data.getVehicleId(),
+                                    data.getContractId() != null ? data.getContractId() : "",
+                                    data.getTimestamp());
+                        })));
     }
 
     public Mono<VehicleData> getLatestVehicleData(String vehicleId) {

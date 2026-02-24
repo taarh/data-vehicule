@@ -2,6 +2,8 @@ package com.example.controller;
 
 import com.example.model.VehicleData;
 import com.example.service.VehicleDataService;
+import io.swagger.v3.oas.annotations.Parameter;
+import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.PageRequest;
@@ -70,7 +72,9 @@ public class VehicleDataController {
     @GetMapping("/{vehicleId}/timerange")
     public Mono<ResponseEntity<Flux<VehicleData>>> getVehicleDataByTimeRange(
             @PathVariable String vehicleId,
+            @Parameter(description = "Start of time range (ISO-8601)", example = "2025-02-23T00:00:00Z", schema = @Schema(type = "string", format = "date-time"))
             @RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME) Instant startTime,
+            @Parameter(description = "End of time range (ISO-8601)", example = "2025-02-23T23:59:59Z", schema = @Schema(type = "string", format = "date-time"))
             @RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME) Instant endTime) {
         log.info("Fetching vehicle data for vehicleId: {} between {} and {}", vehicleId, startTime, endTime);
         
